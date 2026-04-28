@@ -74,9 +74,9 @@
             this.lbl_UsernameEmail.AutoSize = true;
             this.lbl_UsernameEmail.Location = new System.Drawing.Point(50, 63);
             this.lbl_UsernameEmail.Name = "lbl_UsernameEmail";
-            this.lbl_UsernameEmail.Size = new System.Drawing.Size(91, 13);
+            this.lbl_UsernameEmail.Size = new System.Drawing.Size(32, 13);
             this.lbl_UsernameEmail.TabIndex = 2;
-            this.lbl_UsernameEmail.Text = "Email / Username";
+            this.lbl_UsernameEmail.Text = "Email";
             // 
             // lbl_Password
             // 
