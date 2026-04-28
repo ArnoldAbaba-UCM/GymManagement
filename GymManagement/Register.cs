@@ -15,6 +15,7 @@ namespace GymManagement
         public Register()
         {
             InitializeComponent();
+            pl_Plan.Hide();
         }
 
     }

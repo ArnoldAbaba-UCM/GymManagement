@@ -34,15 +34,21 @@
             this.btn_Plan = new System.Windows.Forms.Button();
             this.btn_Payment = new System.Windows.Forms.Button();
             this.pl_Personal = new System.Windows.Forms.Panel();
-            this.lbl_FirstName = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.txt_LastName = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.txt_FirstName = new System.Windows.Forms.TextBox();
+            this.lbl_Email = new System.Windows.Forms.Label();
             this.lbl_LastName = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_FirstName = new System.Windows.Forms.Label();
+            this.txt_PhoneNumber = new System.Windows.Forms.TextBox();
+            this.txt_Password = new System.Windows.Forms.TextBox();
+            this.txt_Email = new System.Windows.Forms.TextBox();
+            this.txt_LastName = new System.Windows.Forms.TextBox();
+            this.cmb_Month = new System.Windows.Forms.ComboBox();
+            this.txt_FirstName = new System.Windows.Forms.TextBox();
+            this.lbl_Password = new System.Windows.Forms.Label();
+            this.lbl_PhoneNumber = new System.Windows.Forms.Label();
+            this.lbl_BirthDate = new System.Windows.Forms.Label();
+            this.cmb_Day = new System.Windows.Forms.ComboBox();
+            this.cmb_Year = new System.Windows.Forms.ComboBox();
+            this.pl_Plan = new System.Windows.Forms.Panel();
             this.pl_createYourMembership.SuspendLayout();
             this.pl_Personal.SuspendLayout();
             this.SuspendLayout();
@@ -102,52 +108,76 @@
             // 
             // pl_Personal
             // 
-            this.pl_Personal.Controls.Add(this.label1);
+            this.pl_Personal.Controls.Add(this.cmb_Year);
+            this.pl_Personal.Controls.Add(this.cmb_Day);
+            this.pl_Personal.Controls.Add(this.lbl_BirthDate);
+            this.pl_Personal.Controls.Add(this.lbl_PhoneNumber);
+            this.pl_Personal.Controls.Add(this.lbl_Password);
+            this.pl_Personal.Controls.Add(this.lbl_Email);
             this.pl_Personal.Controls.Add(this.lbl_LastName);
             this.pl_Personal.Controls.Add(this.lbl_FirstName);
-            this.pl_Personal.Controls.Add(this.textBox5);
-            this.pl_Personal.Controls.Add(this.textBox4);
-            this.pl_Personal.Controls.Add(this.textBox3);
+            this.pl_Personal.Controls.Add(this.txt_PhoneNumber);
+            this.pl_Personal.Controls.Add(this.txt_Password);
+            this.pl_Personal.Controls.Add(this.txt_Email);
             this.pl_Personal.Controls.Add(this.txt_LastName);
-            this.pl_Personal.Controls.Add(this.comboBox1);
+            this.pl_Personal.Controls.Add(this.cmb_Month);
             this.pl_Personal.Controls.Add(this.txt_FirstName);
             this.pl_Personal.Location = new System.Drawing.Point(0, 83);
             this.pl_Personal.Name = "pl_Personal";
-            this.pl_Personal.Size = new System.Drawing.Size(412, 263);
+            this.pl_Personal.Size = new System.Drawing.Size(412, 240);
             this.pl_Personal.TabIndex = 10;
+            // 
+            // lbl_Email
+            // 
+            this.lbl_Email.AutoSize = true;
+            this.lbl_Email.Location = new System.Drawing.Point(39, 97);
+            this.lbl_Email.Name = "lbl_Email";
+            this.lbl_Email.Size = new System.Drawing.Size(35, 13);
+            this.lbl_Email.TabIndex = 12;
+            this.lbl_Email.Text = "Email:";
+            // 
+            // lbl_LastName
+            // 
+            this.lbl_LastName.AutoSize = true;
+            this.lbl_LastName.Location = new System.Drawing.Point(37, 65);
+            this.lbl_LastName.Name = "lbl_LastName";
+            this.lbl_LastName.Size = new System.Drawing.Size(61, 13);
+            this.lbl_LastName.TabIndex = 11;
+            this.lbl_LastName.Text = "Last Name:";
             // 
             // lbl_FirstName
             // 
             this.lbl_FirstName.AutoSize = true;
-            this.lbl_FirstName.Location = new System.Drawing.Point(38, 33);
+            this.lbl_FirstName.Location = new System.Drawing.Point(37, 33);
             this.lbl_FirstName.Name = "lbl_FirstName";
             this.lbl_FirstName.Size = new System.Drawing.Size(60, 13);
             this.lbl_FirstName.TabIndex = 10;
             this.lbl_FirstName.Text = "First Name:";
             // 
-            // textBox5
+            // txt_PhoneNumber
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(140, 153);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(218, 26);
-            this.textBox5.TabIndex = 9;
+            this.txt_PhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_PhoneNumber.Location = new System.Drawing.Point(140, 153);
+            this.txt_PhoneNumber.Name = "txt_PhoneNumber";
+            this.txt_PhoneNumber.Size = new System.Drawing.Size(218, 26);
+            this.txt_PhoneNumber.TabIndex = 9;
             // 
-            // textBox4
+            // txt_Password
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(140, 121);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(218, 26);
-            this.textBox4.TabIndex = 8;
+            this.txt_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Password.Location = new System.Drawing.Point(140, 121);
+            this.txt_Password.Name = "txt_Password";
+            this.txt_Password.PasswordChar = '*';
+            this.txt_Password.Size = new System.Drawing.Size(218, 26);
+            this.txt_Password.TabIndex = 8;
             // 
-            // textBox3
+            // txt_Email
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(140, 89);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(218, 26);
-            this.textBox3.TabIndex = 7;
+            this.txt_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Email.Location = new System.Drawing.Point(140, 89);
+            this.txt_Email.Name = "txt_Email";
+            this.txt_Email.Size = new System.Drawing.Size(218, 26);
+            this.txt_Email.TabIndex = 7;
             // 
             // txt_LastName
             // 
@@ -157,14 +187,40 @@
             this.txt_LastName.Size = new System.Drawing.Size(218, 26);
             this.txt_LastName.TabIndex = 6;
             // 
-            // comboBox1
+            // cmb_Month
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(140, 185);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(218, 28);
-            this.comboBox1.TabIndex = 5;
+            this.cmb_Month.AutoCompleteCustomSource.AddRange(new string[] {
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"});
+            this.cmb_Month.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Month.FormattingEnabled = true;
+            this.cmb_Month.Items.AddRange(new object[] {
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"});
+            this.cmb_Month.Location = new System.Drawing.Point(140, 185);
+            this.cmb_Month.Name = "cmb_Month";
+            this.cmb_Month.Size = new System.Drawing.Size(64, 28);
+            this.cmb_Month.TabIndex = 5;
             // 
             // txt_FirstName
             // 
@@ -174,29 +230,206 @@
             this.txt_FirstName.Size = new System.Drawing.Size(218, 26);
             this.txt_FirstName.TabIndex = 0;
             // 
-            // lbl_LastName
+            // lbl_Password
             // 
-            this.lbl_LastName.AutoSize = true;
-            this.lbl_LastName.Location = new System.Drawing.Point(38, 65);
-            this.lbl_LastName.Name = "lbl_LastName";
-            this.lbl_LastName.Size = new System.Drawing.Size(61, 13);
-            this.lbl_LastName.TabIndex = 11;
-            this.lbl_LastName.Text = "Last Name:";
+            this.lbl_Password.AutoSize = true;
+            this.lbl_Password.Location = new System.Drawing.Point(39, 129);
+            this.lbl_Password.Name = "lbl_Password";
+            this.lbl_Password.Size = new System.Drawing.Size(56, 13);
+            this.lbl_Password.TabIndex = 13;
+            this.lbl_Password.Text = "Password:";
             // 
-            // label1
+            // lbl_PhoneNumber
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 97);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Last Name:";
+            this.lbl_PhoneNumber.AutoSize = true;
+            this.lbl_PhoneNumber.Location = new System.Drawing.Point(39, 161);
+            this.lbl_PhoneNumber.Name = "lbl_PhoneNumber";
+            this.lbl_PhoneNumber.Size = new System.Drawing.Size(81, 13);
+            this.lbl_PhoneNumber.TabIndex = 14;
+            this.lbl_PhoneNumber.Text = "Phone Number:";
+            // 
+            // lbl_BirthDate
+            // 
+            this.lbl_BirthDate.AutoSize = true;
+            this.lbl_BirthDate.Location = new System.Drawing.Point(39, 193);
+            this.lbl_BirthDate.Name = "lbl_BirthDate";
+            this.lbl_BirthDate.Size = new System.Drawing.Size(69, 13);
+            this.lbl_BirthDate.TabIndex = 15;
+            this.lbl_BirthDate.Text = "Date of Birth:";
+            // 
+            // cmb_Day
+            // 
+            this.cmb_Day.AutoCompleteCustomSource.AddRange(new string[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
+            this.cmb_Day.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Day.FormattingEnabled = true;
+            this.cmb_Day.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
+            this.cmb_Day.Location = new System.Drawing.Point(210, 185);
+            this.cmb_Day.Name = "cmb_Day";
+            this.cmb_Day.Size = new System.Drawing.Size(69, 28);
+            this.cmb_Day.TabIndex = 16;
+            // 
+            // cmb_Year
+            // 
+            this.cmb_Year.AutoCompleteCustomSource.AddRange(new string[] {
+            "2026",
+            "2025",
+            "2024",
+            "2023",
+            "2022",
+            "2021",
+            "2020",
+            "2019",
+            "2018",
+            "2017",
+            "2016",
+            "2015",
+            "2014",
+            "2013",
+            "2012",
+            "2011",
+            "2010",
+            "2009",
+            "2008",
+            "2007",
+            "2006",
+            "2005",
+            "2004",
+            "2003",
+            "2002",
+            "2001",
+            "2000",
+            "1999",
+            "1998",
+            "1997",
+            "1996",
+            "1995",
+            "1994",
+            "1993",
+            "1992",
+            "1991",
+            "1990",
+            "1989",
+            "1988",
+            "1987",
+            "1986",
+            "1985",
+            "1984",
+            "1983",
+            "1982",
+            "1981",
+            "1980",
+            "1979",
+            "1978",
+            "1977",
+            "1976",
+            "1975",
+            "1974",
+            "1973",
+            "1972",
+            "1971",
+            "1970",
+            "1969",
+            "1968",
+            "1967",
+            "1966",
+            "1965",
+            "1964",
+            "1963",
+            "1962",
+            "1961",
+            "1960",
+            "1959",
+            "1958",
+            "1957",
+            "1956",
+            "1955",
+            "1954",
+            "1953",
+            "1952",
+            "1951",
+            "1950"});
+            this.cmb_Year.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Year.FormattingEnabled = true;
+            this.cmb_Year.Location = new System.Drawing.Point(285, 185);
+            this.cmb_Year.Name = "cmb_Year";
+            this.cmb_Year.Size = new System.Drawing.Size(73, 28);
+            this.cmb_Year.TabIndex = 17;
+            // 
+            // pl_Plan
+            // 
+            this.pl_Plan.Location = new System.Drawing.Point(0, 83);
+            this.pl_Plan.Name = "pl_Plan";
+            this.pl_Plan.Size = new System.Drawing.Size(412, 240);
+            this.pl_Plan.TabIndex = 18;
             // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(411, 389);
+            this.Controls.Add(this.pl_Plan);
             this.Controls.Add(this.pl_Personal);
             this.Controls.Add(this.btn_Payment);
             this.Controls.Add(this.btn_Plan);
@@ -221,13 +454,19 @@
         private System.Windows.Forms.Button btn_Payment;
         private System.Windows.Forms.Panel pl_Personal;
         private System.Windows.Forms.Label lbl_FirstName;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_PhoneNumber;
+        private System.Windows.Forms.TextBox txt_Password;
+        private System.Windows.Forms.TextBox txt_Email;
         private System.Windows.Forms.TextBox txt_LastName;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmb_Month;
         private System.Windows.Forms.TextBox txt_FirstName;
         private System.Windows.Forms.Label lbl_LastName;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_Email;
+        private System.Windows.Forms.Label lbl_Password;
+        private System.Windows.Forms.Label lbl_BirthDate;
+        private System.Windows.Forms.Label lbl_PhoneNumber;
+        private System.Windows.Forms.ComboBox cmb_Year;
+        private System.Windows.Forms.ComboBox cmb_Day;
+        private System.Windows.Forms.Panel pl_Plan;
     }
 }

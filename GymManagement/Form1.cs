@@ -16,5 +16,12 @@ namespace GymManagement
         {
             InitializeComponent();
         }
+
+        private void lbl_CreateAccount_Click(object sender, EventArgs e)
+        {
+            Register registerForm = new Register();
+            registerForm.Show();
+            this.Hide();
+        }
     }
 }
