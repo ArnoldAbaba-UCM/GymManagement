@@ -1,0 +1,10 @@
+D:\jm\Visual Studio\Projects\GymManagement\GymManagement\bin\Debug\GymManagement.exe.config
+D:\jm\Visual Studio\Projects\GymManagement\GymManagement\bin\Debug\GymManagement.exe
+D:\jm\Visual Studio\Projects\GymManagement\GymManagement\bin\Debug\GymManagement.pdb
+D:\jm\Visual Studio\Projects\GymManagement\GymManagement\obj\Debug\GymManagement.csprojResolveAssemblyReference.cache
+D:\jm\Visual Studio\Projects\GymManagement\GymManagement\obj\Debug\GymManagement.Form1.resources
+D:\jm\Visual Studio\Projects\GymManagement\GymManagement\obj\Debug\GymManagement.Properties.Resources.resources
+D:\jm\Visual Studio\Projects\GymManagement\GymManagement\obj\Debug\GymManagement.csproj.GenerateResource.Cache
+D:\jm\Visual Studio\Projects\GymManagement\GymManagement\obj\Debug\GymManagement.exe
+D:\jm\Visual Studio\Projects\GymManagement\GymManagement\obj\Debug\GymManagement.pdb
+D:\jm\Visual Studio\Projects\GymManagement\GymManagement\obj\Debug\GymManagement.Register.resources
