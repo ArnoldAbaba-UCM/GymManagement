@@ -15,7 +15,16 @@ namespace GymManagement
         public Register()
         {
             InitializeComponent();
-            pl_Plan.Hide();
+        }
+
+        private void btn_Plan_Click(object sender, EventArgs e)
+        {
+            pl_Plan.BringToFront();
+        }
+
+        private void btn_Personal_Click(object sender, EventArgs e)
+        {
+            pl_Personal.BringToFront();
         }
 
     }
