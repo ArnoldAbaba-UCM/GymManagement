@@ -19,12 +19,14 @@ namespace GymManagement
 
         private void btn_Plan_Click(object sender, EventArgs e)
         {
-            pl_Plan.BringToFront();
+            pl_Personal.Hide();
+            pl_Plan.Show();
         }
 
         private void btn_Personal_Click(object sender, EventArgs e)
         {
-            pl_Personal.BringToFront();
+            pl_Personal.Show();
+            pl_Plan.Hide();
         }
 
     }

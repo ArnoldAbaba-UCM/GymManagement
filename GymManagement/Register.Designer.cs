@@ -34,15 +34,6 @@
             this.btn_Plan = new System.Windows.Forms.Button();
             this.btn_Payment = new System.Windows.Forms.Button();
             this.pl_Personal = new System.Windows.Forms.Panel();
-            this.pl_Plan = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.lbl_StartDate = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.lbl_TotalPrice = new System.Windows.Forms.Label();
-            this.lbl_Price = new System.Windows.Forms.Label();
-            this.txt_Plan = new System.Windows.Forms.TextBox();
-            this.lbl_SelectPlan = new System.Windows.Forms.Label();
             this.cmb_Year = new System.Windows.Forms.ComboBox();
             this.cmb_Day = new System.Windows.Forms.ComboBox();
             this.lbl_BirthDate = new System.Windows.Forms.Label();
@@ -57,6 +48,16 @@
             this.txt_LastName = new System.Windows.Forms.TextBox();
             this.cmb_Month = new System.Windows.Forms.ComboBox();
             this.txt_FirstName = new System.Windows.Forms.TextBox();
+            this.lbl_SelectPlan = new System.Windows.Forms.Label();
+            this.txt_Plan = new System.Windows.Forms.TextBox();
+            this.lbl_Price = new System.Windows.Forms.Label();
+            this.lbl_TotalPrice = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.lbl_StartDate = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.pl_Plan = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pl_createYourMembership.SuspendLayout();
             this.pl_Personal.SuspendLayout();
             this.pl_Plan.SuspendLayout();
@@ -119,7 +120,6 @@
             // 
             // pl_Personal
             // 
-            this.pl_Personal.Controls.Add(this.pl_Plan);
             this.pl_Personal.Controls.Add(this.cmb_Year);
             this.pl_Personal.Controls.Add(this.cmb_Day);
             this.pl_Personal.Controls.Add(this.lbl_BirthDate);
@@ -138,264 +138,6 @@
             this.pl_Personal.Name = "pl_Personal";
             this.pl_Personal.Size = new System.Drawing.Size(412, 240);
             this.pl_Personal.TabIndex = 10;
-            // 
-            // pl_Plan
-            // 
-            this.pl_Plan.Controls.Add(this.comboBox1);
-            this.pl_Plan.Controls.Add(this.comboBox2);
-            this.pl_Plan.Controls.Add(this.lbl_StartDate);
-            this.pl_Plan.Controls.Add(this.comboBox3);
-            this.pl_Plan.Controls.Add(this.lbl_TotalPrice);
-            this.pl_Plan.Controls.Add(this.lbl_Price);
-            this.pl_Plan.Controls.Add(this.txt_Plan);
-            this.pl_Plan.Controls.Add(this.lbl_SelectPlan);
-            this.pl_Plan.Location = new System.Drawing.Point(0, 0);
-            this.pl_Plan.Name = "pl_Plan";
-            this.pl_Plan.Size = new System.Drawing.Size(412, 240);
-            this.pl_Plan.TabIndex = 18;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.AutoCompleteCustomSource.AddRange(new string[] {
-            "2026",
-            "2025",
-            "2024",
-            "2023",
-            "2022",
-            "2021",
-            "2020",
-            "2019",
-            "2018",
-            "2017",
-            "2016",
-            "2015",
-            "2014",
-            "2013",
-            "2012",
-            "2011",
-            "2010",
-            "2009",
-            "2008",
-            "2007",
-            "2006",
-            "2005",
-            "2004",
-            "2003",
-            "2002",
-            "2001",
-            "2000",
-            "1999",
-            "1998",
-            "1997",
-            "1996",
-            "1995",
-            "1994",
-            "1993",
-            "1992",
-            "1991",
-            "1990",
-            "1989",
-            "1988",
-            "1987",
-            "1986",
-            "1985",
-            "1984",
-            "1983",
-            "1982",
-            "1981",
-            "1980",
-            "1979",
-            "1978",
-            "1977",
-            "1976",
-            "1975",
-            "1974",
-            "1973",
-            "1972",
-            "1971",
-            "1970",
-            "1969",
-            "1968",
-            "1967",
-            "1966",
-            "1965",
-            "1964",
-            "1963",
-            "1962",
-            "1961",
-            "1960",
-            "1959",
-            "1958",
-            "1957",
-            "1956",
-            "1955",
-            "1954",
-            "1953",
-            "1952",
-            "1951",
-            "1950"});
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(248, 121);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(67, 28);
-            this.comboBox1.TabIndex = 21;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.AutoCompleteCustomSource.AddRange(new string[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31"});
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31"});
-            this.comboBox2.Location = new System.Drawing.Point(188, 121);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(54, 28);
-            this.comboBox2.TabIndex = 20;
-            // 
-            // lbl_StartDate
-            // 
-            this.lbl_StartDate.AutoSize = true;
-            this.lbl_StartDate.Location = new System.Drawing.Point(56, 129);
-            this.lbl_StartDate.Name = "lbl_StartDate";
-            this.lbl_StartDate.Size = new System.Drawing.Size(58, 13);
-            this.lbl_StartDate.TabIndex = 19;
-            this.lbl_StartDate.Text = "Start Date:";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.AutoCompleteCustomSource.AddRange(new string[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"});
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"});
-            this.comboBox3.Location = new System.Drawing.Point(126, 121);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(56, 28);
-            this.comboBox3.TabIndex = 18;
-            // 
-            // lbl_TotalPrice
-            // 
-            this.lbl_TotalPrice.AutoSize = true;
-            this.lbl_TotalPrice.Location = new System.Drawing.Point(131, 81);
-            this.lbl_TotalPrice.Name = "lbl_TotalPrice";
-            this.lbl_TotalPrice.Size = new System.Drawing.Size(14, 13);
-            this.lbl_TotalPrice.TabIndex = 3;
-            this.lbl_TotalPrice.Text = "₱";
-            // 
-            // lbl_Price
-            // 
-            this.lbl_Price.AutoSize = true;
-            this.lbl_Price.Location = new System.Drawing.Point(56, 78);
-            this.lbl_Price.Name = "lbl_Price";
-            this.lbl_Price.Size = new System.Drawing.Size(34, 13);
-            this.lbl_Price.TabIndex = 2;
-            this.lbl_Price.Text = "Price:";
-            // 
-            // txt_Plan
-            // 
-            this.txt_Plan.AutoCompleteCustomSource.AddRange(new string[] {
-            "Monthly - ₱800",
-            "Quarterly - ₱1200",
-            "Yearly - ₱1500"});
-            this.txt_Plan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Plan.Location = new System.Drawing.Point(126, 33);
-            this.txt_Plan.Name = "txt_Plan";
-            this.txt_Plan.Size = new System.Drawing.Size(189, 26);
-            this.txt_Plan.TabIndex = 1;
-            // 
-            // lbl_SelectPlan
-            // 
-            this.lbl_SelectPlan.AutoSize = true;
-            this.lbl_SelectPlan.Location = new System.Drawing.Point(56, 38);
-            this.lbl_SelectPlan.Name = "lbl_SelectPlan";
-            this.lbl_SelectPlan.Size = new System.Drawing.Size(64, 13);
-            this.lbl_SelectPlan.TabIndex = 0;
-            this.lbl_SelectPlan.Text = "Select Plan:";
             // 
             // cmb_Year
             // 
@@ -687,11 +429,280 @@
             this.txt_FirstName.Size = new System.Drawing.Size(218, 26);
             this.txt_FirstName.TabIndex = 0;
             // 
+            // lbl_SelectPlan
+            // 
+            this.lbl_SelectPlan.AutoSize = true;
+            this.lbl_SelectPlan.Location = new System.Drawing.Point(56, 38);
+            this.lbl_SelectPlan.Name = "lbl_SelectPlan";
+            this.lbl_SelectPlan.Size = new System.Drawing.Size(64, 13);
+            this.lbl_SelectPlan.TabIndex = 0;
+            this.lbl_SelectPlan.Text = "Select Plan:";
+            // 
+            // txt_Plan
+            // 
+            this.txt_Plan.AutoCompleteCustomSource.AddRange(new string[] {
+            "Monthly - ₱800",
+            "Quarterly - ₱1200",
+            "Yearly - ₱1500"});
+            this.txt_Plan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Plan.Location = new System.Drawing.Point(126, 33);
+            this.txt_Plan.Name = "txt_Plan";
+            this.txt_Plan.Size = new System.Drawing.Size(189, 26);
+            this.txt_Plan.TabIndex = 1;
+            // 
+            // lbl_Price
+            // 
+            this.lbl_Price.AutoSize = true;
+            this.lbl_Price.Location = new System.Drawing.Point(56, 78);
+            this.lbl_Price.Name = "lbl_Price";
+            this.lbl_Price.Size = new System.Drawing.Size(34, 13);
+            this.lbl_Price.TabIndex = 2;
+            this.lbl_Price.Text = "Price:";
+            // 
+            // lbl_TotalPrice
+            // 
+            this.lbl_TotalPrice.AutoSize = true;
+            this.lbl_TotalPrice.Location = new System.Drawing.Point(131, 81);
+            this.lbl_TotalPrice.Name = "lbl_TotalPrice";
+            this.lbl_TotalPrice.Size = new System.Drawing.Size(14, 13);
+            this.lbl_TotalPrice.TabIndex = 3;
+            this.lbl_TotalPrice.Text = "₱";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.AutoCompleteCustomSource.AddRange(new string[] {
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"});
+            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"});
+            this.comboBox3.Location = new System.Drawing.Point(126, 121);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(56, 28);
+            this.comboBox3.TabIndex = 18;
+            // 
+            // lbl_StartDate
+            // 
+            this.lbl_StartDate.AutoSize = true;
+            this.lbl_StartDate.Location = new System.Drawing.Point(56, 129);
+            this.lbl_StartDate.Name = "lbl_StartDate";
+            this.lbl_StartDate.Size = new System.Drawing.Size(58, 13);
+            this.lbl_StartDate.TabIndex = 19;
+            this.lbl_StartDate.Text = "Start Date:";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.AutoCompleteCustomSource.AddRange(new string[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
+            this.comboBox2.Location = new System.Drawing.Point(188, 121);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(54, 28);
+            this.comboBox2.TabIndex = 20;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.AutoCompleteCustomSource.AddRange(new string[] {
+            "2026",
+            "2025",
+            "2024",
+            "2023",
+            "2022",
+            "2021",
+            "2020",
+            "2019",
+            "2018",
+            "2017",
+            "2016",
+            "2015",
+            "2014",
+            "2013",
+            "2012",
+            "2011",
+            "2010",
+            "2009",
+            "2008",
+            "2007",
+            "2006",
+            "2005",
+            "2004",
+            "2003",
+            "2002",
+            "2001",
+            "2000",
+            "1999",
+            "1998",
+            "1997",
+            "1996",
+            "1995",
+            "1994",
+            "1993",
+            "1992",
+            "1991",
+            "1990",
+            "1989",
+            "1988",
+            "1987",
+            "1986",
+            "1985",
+            "1984",
+            "1983",
+            "1982",
+            "1981",
+            "1980",
+            "1979",
+            "1978",
+            "1977",
+            "1976",
+            "1975",
+            "1974",
+            "1973",
+            "1972",
+            "1971",
+            "1970",
+            "1969",
+            "1968",
+            "1967",
+            "1966",
+            "1965",
+            "1964",
+            "1963",
+            "1962",
+            "1961",
+            "1960",
+            "1959",
+            "1958",
+            "1957",
+            "1956",
+            "1955",
+            "1954",
+            "1953",
+            "1952",
+            "1951",
+            "1950"});
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(248, 121);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(67, 28);
+            this.comboBox1.TabIndex = 21;
+            // 
+            // pl_Plan
+            // 
+            this.pl_Plan.Controls.Add(this.comboBox1);
+            this.pl_Plan.Controls.Add(this.comboBox2);
+            this.pl_Plan.Controls.Add(this.lbl_StartDate);
+            this.pl_Plan.Controls.Add(this.comboBox3);
+            this.pl_Plan.Controls.Add(this.lbl_TotalPrice);
+            this.pl_Plan.Controls.Add(this.lbl_Price);
+            this.pl_Plan.Controls.Add(this.txt_Plan);
+            this.pl_Plan.Controls.Add(this.lbl_SelectPlan);
+            this.pl_Plan.Location = new System.Drawing.Point(0, 80);
+            this.pl_Plan.Name = "pl_Plan";
+            this.pl_Plan.Size = new System.Drawing.Size(412, 240);
+            this.pl_Plan.TabIndex = 19;
+            this.pl_Plan.Visible = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(0, 77);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(412, 243);
+            this.panel1.TabIndex = 22;
+            this.panel1.Visible = false;
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(411, 389);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pl_Plan);
             this.Controls.Add(this.pl_Personal);
             this.Controls.Add(this.btn_Payment);
             this.Controls.Add(this.btn_Plan);
@@ -731,14 +742,15 @@
         private System.Windows.Forms.Label lbl_PhoneNumber;
         private System.Windows.Forms.ComboBox cmb_Year;
         private System.Windows.Forms.ComboBox cmb_Day;
-        private System.Windows.Forms.Panel pl_Plan;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label lbl_StartDate;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label lbl_TotalPrice;
-        private System.Windows.Forms.Label lbl_Price;
-        private System.Windows.Forms.TextBox txt_Plan;
         private System.Windows.Forms.Label lbl_SelectPlan;
+        private System.Windows.Forms.TextBox txt_Plan;
+        private System.Windows.Forms.Label lbl_Price;
+        private System.Windows.Forms.Label lbl_TotalPrice;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label lbl_StartDate;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Panel pl_Plan;
+        private System.Windows.Forms.Panel panel1;
     }
 }
