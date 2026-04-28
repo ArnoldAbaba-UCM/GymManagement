@@ -58,9 +58,18 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pl_Plan = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_Amount = new System.Windows.Forms.TextBox();
+            this.cmb_Year1 = new System.Windows.Forms.ComboBox();
+            this.cmb_Day1 = new System.Windows.Forms.ComboBox();
+            this.lbl_PaymentDate = new System.Windows.Forms.Label();
+            this.cmb_Month1 = new System.Windows.Forms.ComboBox();
+            this.cmb_Method = new System.Windows.Forms.ComboBox();
+            this.lbl_Amount = new System.Windows.Forms.Label();
+            this.lbl_Method = new System.Windows.Forms.Label();
             this.pl_createYourMembership.SuspendLayout();
             this.pl_Personal.SuspendLayout();
             this.pl_Plan.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pl_createYourMembership
@@ -690,11 +699,262 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lbl_Method);
+            this.panel1.Controls.Add(this.lbl_Amount);
+            this.panel1.Controls.Add(this.cmb_Method);
+            this.panel1.Controls.Add(this.cmb_Year1);
+            this.panel1.Controls.Add(this.cmb_Day1);
+            this.panel1.Controls.Add(this.lbl_PaymentDate);
+            this.panel1.Controls.Add(this.cmb_Month1);
+            this.panel1.Controls.Add(this.txt_Amount);
             this.panel1.Location = new System.Drawing.Point(0, 77);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(412, 243);
             this.panel1.TabIndex = 22;
             this.panel1.Visible = false;
+            // 
+            // txt_Amount
+            // 
+            this.txt_Amount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Amount.Location = new System.Drawing.Point(126, 44);
+            this.txt_Amount.Name = "txt_Amount";
+            this.txt_Amount.Size = new System.Drawing.Size(189, 26);
+            this.txt_Amount.TabIndex = 0;
+            // 
+            // cmb_Year1
+            // 
+            this.cmb_Year1.AutoCompleteCustomSource.AddRange(new string[] {
+            "2026",
+            "2025",
+            "2024",
+            "2023",
+            "2022",
+            "2021",
+            "2020",
+            "2019",
+            "2018",
+            "2017",
+            "2016",
+            "2015",
+            "2014",
+            "2013",
+            "2012",
+            "2011",
+            "2010",
+            "2009",
+            "2008",
+            "2007",
+            "2006",
+            "2005",
+            "2004",
+            "2003",
+            "2002",
+            "2001",
+            "2000",
+            "1999",
+            "1998",
+            "1997",
+            "1996",
+            "1995",
+            "1994",
+            "1993",
+            "1992",
+            "1991",
+            "1990",
+            "1989",
+            "1988",
+            "1987",
+            "1986",
+            "1985",
+            "1984",
+            "1983",
+            "1982",
+            "1981",
+            "1980",
+            "1979",
+            "1978",
+            "1977",
+            "1976",
+            "1975",
+            "1974",
+            "1973",
+            "1972",
+            "1971",
+            "1970",
+            "1969",
+            "1968",
+            "1967",
+            "1966",
+            "1965",
+            "1964",
+            "1963",
+            "1962",
+            "1961",
+            "1960",
+            "1959",
+            "1958",
+            "1957",
+            "1956",
+            "1955",
+            "1954",
+            "1953",
+            "1952",
+            "1951",
+            "1950"});
+            this.cmb_Year1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Year1.FormattingEnabled = true;
+            this.cmb_Year1.Location = new System.Drawing.Point(248, 76);
+            this.cmb_Year1.Name = "cmb_Year1";
+            this.cmb_Year1.Size = new System.Drawing.Size(67, 28);
+            this.cmb_Year1.TabIndex = 25;
+            // 
+            // cmb_Day1
+            // 
+            this.cmb_Day1.AutoCompleteCustomSource.AddRange(new string[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
+            this.cmb_Day1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Day1.FormattingEnabled = true;
+            this.cmb_Day1.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
+            this.cmb_Day1.Location = new System.Drawing.Point(188, 76);
+            this.cmb_Day1.Name = "cmb_Day1";
+            this.cmb_Day1.Size = new System.Drawing.Size(54, 28);
+            this.cmb_Day1.TabIndex = 24;
+            // 
+            // lbl_PaymentDate
+            // 
+            this.lbl_PaymentDate.AutoSize = true;
+            this.lbl_PaymentDate.Location = new System.Drawing.Point(43, 84);
+            this.lbl_PaymentDate.Name = "lbl_PaymentDate";
+            this.lbl_PaymentDate.Size = new System.Drawing.Size(77, 13);
+            this.lbl_PaymentDate.TabIndex = 23;
+            this.lbl_PaymentDate.Text = "Payment Date:";
+            // 
+            // cmb_Month1
+            // 
+            this.cmb_Month1.AutoCompleteCustomSource.AddRange(new string[] {
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"});
+            this.cmb_Month1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Month1.FormattingEnabled = true;
+            this.cmb_Month1.Items.AddRange(new object[] {
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"});
+            this.cmb_Month1.Location = new System.Drawing.Point(126, 76);
+            this.cmb_Month1.Name = "cmb_Month1";
+            this.cmb_Month1.Size = new System.Drawing.Size(56, 28);
+            this.cmb_Month1.TabIndex = 22;
+            // 
+            // cmb_Method
+            // 
+            this.cmb_Method.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Method.FormattingEnabled = true;
+            this.cmb_Method.Items.AddRange(new object[] {
+            "Cash",
+            "Card",
+            "Bank Transfer"});
+            this.cmb_Method.Location = new System.Drawing.Point(126, 110);
+            this.cmb_Method.Name = "cmb_Method";
+            this.cmb_Method.Size = new System.Drawing.Size(189, 28);
+            this.cmb_Method.TabIndex = 26;
+            // 
+            // lbl_Amount
+            // 
+            this.lbl_Amount.AutoSize = true;
+            this.lbl_Amount.Location = new System.Drawing.Point(43, 52);
+            this.lbl_Amount.Name = "lbl_Amount";
+            this.lbl_Amount.Size = new System.Drawing.Size(46, 13);
+            this.lbl_Amount.TabIndex = 27;
+            this.lbl_Amount.Text = "Amount:";
+            // 
+            // lbl_Method
+            // 
+            this.lbl_Method.AutoSize = true;
+            this.lbl_Method.Location = new System.Drawing.Point(49, 118);
+            this.lbl_Method.Name = "lbl_Method";
+            this.lbl_Method.Size = new System.Drawing.Size(46, 13);
+            this.lbl_Method.TabIndex = 28;
+            this.lbl_Method.Text = "Method:";
             // 
             // Register
             // 
@@ -716,6 +976,8 @@
             this.pl_Personal.PerformLayout();
             this.pl_Plan.ResumeLayout(false);
             this.pl_Plan.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -752,5 +1014,13 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel pl_Plan;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lbl_Method;
+        private System.Windows.Forms.Label lbl_Amount;
+        private System.Windows.Forms.ComboBox cmb_Method;
+        private System.Windows.Forms.ComboBox cmb_Year1;
+        private System.Windows.Forms.ComboBox cmb_Day1;
+        private System.Windows.Forms.Label lbl_PaymentDate;
+        private System.Windows.Forms.ComboBox cmb_Month1;
+        private System.Windows.Forms.TextBox txt_Amount;
     }
 }
