@@ -57,19 +57,21 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pl_Plan = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txt_Amount = new System.Windows.Forms.TextBox();
+            this.pl_Payment = new System.Windows.Forms.Panel();
+            this.lbl_Method = new System.Windows.Forms.Label();
+            this.lbl_Amount = new System.Windows.Forms.Label();
+            this.cmb_Method = new System.Windows.Forms.ComboBox();
             this.cmb_Year1 = new System.Windows.Forms.ComboBox();
             this.cmb_Day1 = new System.Windows.Forms.ComboBox();
             this.lbl_PaymentDate = new System.Windows.Forms.Label();
             this.cmb_Month1 = new System.Windows.Forms.ComboBox();
-            this.cmb_Method = new System.Windows.Forms.ComboBox();
-            this.lbl_Amount = new System.Windows.Forms.Label();
-            this.lbl_Method = new System.Windows.Forms.Label();
+            this.txt_Amount = new System.Windows.Forms.TextBox();
+            this.btn_Next = new System.Windows.Forms.Button();
+            this.btn_CompleteRegistration = new System.Windows.Forms.Button();
             this.pl_createYourMembership.SuspendLayout();
             this.pl_Personal.SuspendLayout();
             this.pl_Plan.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pl_Payment.SuspendLayout();
             this.SuspendLayout();
             // 
             // pl_createYourMembership
@@ -126,6 +128,7 @@
             this.btn_Payment.TabIndex = 9;
             this.btn_Payment.Text = "3. Payment";
             this.btn_Payment.UseVisualStyleBackColor = false;
+            this.btn_Payment.Click += new System.EventHandler(this.btn_Payment_Click);
             // 
             // pl_Personal
             // 
@@ -697,29 +700,52 @@
             this.pl_Plan.TabIndex = 19;
             this.pl_Plan.Visible = false;
             // 
-            // panel1
+            // pl_Payment
             // 
-            this.panel1.Controls.Add(this.lbl_Method);
-            this.panel1.Controls.Add(this.lbl_Amount);
-            this.panel1.Controls.Add(this.cmb_Method);
-            this.panel1.Controls.Add(this.cmb_Year1);
-            this.panel1.Controls.Add(this.cmb_Day1);
-            this.panel1.Controls.Add(this.lbl_PaymentDate);
-            this.panel1.Controls.Add(this.cmb_Month1);
-            this.panel1.Controls.Add(this.txt_Amount);
-            this.panel1.Location = new System.Drawing.Point(0, 77);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(412, 243);
-            this.panel1.TabIndex = 22;
-            this.panel1.Visible = false;
+            this.pl_Payment.Controls.Add(this.lbl_Method);
+            this.pl_Payment.Controls.Add(this.lbl_Amount);
+            this.pl_Payment.Controls.Add(this.cmb_Method);
+            this.pl_Payment.Controls.Add(this.cmb_Year1);
+            this.pl_Payment.Controls.Add(this.cmb_Day1);
+            this.pl_Payment.Controls.Add(this.lbl_PaymentDate);
+            this.pl_Payment.Controls.Add(this.cmb_Month1);
+            this.pl_Payment.Controls.Add(this.txt_Amount);
+            this.pl_Payment.Location = new System.Drawing.Point(0, 77);
+            this.pl_Payment.Name = "pl_Payment";
+            this.pl_Payment.Size = new System.Drawing.Size(412, 243);
+            this.pl_Payment.TabIndex = 22;
+            this.pl_Payment.Visible = false;
             // 
-            // txt_Amount
+            // lbl_Method
             // 
-            this.txt_Amount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Amount.Location = new System.Drawing.Point(126, 44);
-            this.txt_Amount.Name = "txt_Amount";
-            this.txt_Amount.Size = new System.Drawing.Size(189, 26);
-            this.txt_Amount.TabIndex = 0;
+            this.lbl_Method.AutoSize = true;
+            this.lbl_Method.Location = new System.Drawing.Point(49, 118);
+            this.lbl_Method.Name = "lbl_Method";
+            this.lbl_Method.Size = new System.Drawing.Size(46, 13);
+            this.lbl_Method.TabIndex = 28;
+            this.lbl_Method.Text = "Method:";
+            // 
+            // lbl_Amount
+            // 
+            this.lbl_Amount.AutoSize = true;
+            this.lbl_Amount.Location = new System.Drawing.Point(43, 52);
+            this.lbl_Amount.Name = "lbl_Amount";
+            this.lbl_Amount.Size = new System.Drawing.Size(46, 13);
+            this.lbl_Amount.TabIndex = 27;
+            this.lbl_Amount.Text = "Amount:";
+            // 
+            // cmb_Method
+            // 
+            this.cmb_Method.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Method.FormattingEnabled = true;
+            this.cmb_Method.Items.AddRange(new object[] {
+            "Cash",
+            "Card",
+            "Bank Transfer"});
+            this.cmb_Method.Location = new System.Drawing.Point(126, 110);
+            this.cmb_Method.Name = "cmb_Method";
+            this.cmb_Method.Size = new System.Drawing.Size(189, 28);
+            this.cmb_Method.TabIndex = 26;
             // 
             // cmb_Year1
             // 
@@ -925,43 +951,44 @@
             this.cmb_Month1.Size = new System.Drawing.Size(56, 28);
             this.cmb_Month1.TabIndex = 22;
             // 
-            // cmb_Method
+            // txt_Amount
             // 
-            this.cmb_Method.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_Method.FormattingEnabled = true;
-            this.cmb_Method.Items.AddRange(new object[] {
-            "Cash",
-            "Card",
-            "Bank Transfer"});
-            this.cmb_Method.Location = new System.Drawing.Point(126, 110);
-            this.cmb_Method.Name = "cmb_Method";
-            this.cmb_Method.Size = new System.Drawing.Size(189, 28);
-            this.cmb_Method.TabIndex = 26;
+            this.txt_Amount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Amount.Location = new System.Drawing.Point(126, 44);
+            this.txt_Amount.Name = "txt_Amount";
+            this.txt_Amount.Size = new System.Drawing.Size(189, 26);
+            this.txt_Amount.TabIndex = 0;
             // 
-            // lbl_Amount
+            // btn_Next
             // 
-            this.lbl_Amount.AutoSize = true;
-            this.lbl_Amount.Location = new System.Drawing.Point(43, 52);
-            this.lbl_Amount.Name = "lbl_Amount";
-            this.lbl_Amount.Size = new System.Drawing.Size(46, 13);
-            this.lbl_Amount.TabIndex = 27;
-            this.lbl_Amount.Text = "Amount:";
+            this.btn_Next.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Next.Location = new System.Drawing.Point(160, 343);
+            this.btn_Next.Name = "btn_Next";
+            this.btn_Next.Size = new System.Drawing.Size(75, 23);
+            this.btn_Next.TabIndex = 23;
+            this.btn_Next.Text = "Next";
+            this.btn_Next.UseVisualStyleBackColor = true;
+            this.btn_Next.Click += new System.EventHandler(this.btn_Next_Click);
             // 
-            // lbl_Method
+            // btn_CompleteRegistration
             // 
-            this.lbl_Method.AutoSize = true;
-            this.lbl_Method.Location = new System.Drawing.Point(49, 118);
-            this.lbl_Method.Name = "lbl_Method";
-            this.lbl_Method.Size = new System.Drawing.Size(46, 13);
-            this.lbl_Method.TabIndex = 28;
-            this.lbl_Method.Text = "Method:";
+            this.btn_CompleteRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_CompleteRegistration.Location = new System.Drawing.Point(240, 343);
+            this.btn_CompleteRegistration.Name = "btn_CompleteRegistration";
+            this.btn_CompleteRegistration.Size = new System.Drawing.Size(143, 23);
+            this.btn_CompleteRegistration.TabIndex = 24;
+            this.btn_CompleteRegistration.Text = "Complete Registration";
+            this.btn_CompleteRegistration.UseVisualStyleBackColor = true;
+            this.btn_CompleteRegistration.Click += new System.EventHandler(this.btn_CompleteRegistration_Click);
             // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(411, 389);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btn_CompleteRegistration);
+            this.Controls.Add(this.btn_Next);
+            this.Controls.Add(this.pl_Payment);
             this.Controls.Add(this.pl_Plan);
             this.Controls.Add(this.pl_Personal);
             this.Controls.Add(this.btn_Payment);
@@ -976,8 +1003,8 @@
             this.pl_Personal.PerformLayout();
             this.pl_Plan.ResumeLayout(false);
             this.pl_Plan.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pl_Payment.ResumeLayout(false);
+            this.pl_Payment.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1013,7 +1040,7 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel pl_Plan;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pl_Payment;
         private System.Windows.Forms.Label lbl_Method;
         private System.Windows.Forms.Label lbl_Amount;
         private System.Windows.Forms.ComboBox cmb_Method;
@@ -1022,5 +1049,7 @@
         private System.Windows.Forms.Label lbl_PaymentDate;
         private System.Windows.Forms.ComboBox cmb_Month1;
         private System.Windows.Forms.TextBox txt_Amount;
+        private System.Windows.Forms.Button btn_Next;
+        private System.Windows.Forms.Button btn_CompleteRegistration;
     }
 }

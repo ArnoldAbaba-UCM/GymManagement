@@ -1,6 +1,6 @@
 ﻿namespace GymManagement
 {
-    partial class Form1
+    partial class loginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -138,7 +138,7 @@
             this.lbl_CreateAccount.Text = "Create an account";
             this.lbl_CreateAccount.Click += new System.EventHandler(this.lbl_CreateAccount_Click);
             // 
-            // Form1
+            // loginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -152,7 +152,7 @@
             this.Controls.Add(this.lbl_UsernameEmail);
             this.Controls.Add(this.txt_UsernameEmail);
             this.Controls.Add(this.pl_MemberLogin);
-            this.Name = "Form1";
+            this.Name = "loginForm";
             this.Text = "Form1";
             this.pl_MemberLogin.ResumeLayout(false);
             this.pl_MemberLogin.PerformLayout();
