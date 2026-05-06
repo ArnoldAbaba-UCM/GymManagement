@@ -17,3 +17,12 @@
 
 > Changed from admin view to now user input. added steps up to payment window.
 changes made by Ababa as per Costanilla via Mr Montecillo's advice.
+
+(5/4/2026)
+
+> Implementation of registration logic and data validation for the registerForm by Ababa.
+
+
+(5/6/2026)
+
+> Integration of the main dashboard interface and its primary system functionalities by Ababa.
