@@ -22,6 +22,13 @@ changes made by Ababa as per Costanilla via Mr Montecillo's advice.
 
 > Implementation of registration logic and data validation for the registerForm by Ababa.
 
+(5/5/2026)
+
+> Code review and feedback on registerForm data validation by Costanilla; requested additional checks for membership type consistency with payment window by Costanilla.
+
+> UI/UX walkthrough of the registration flow by Diaz and Repaso; identified improvements for error message placement and input field grouping by Diaz & Repaso.
+
+> Preparation of dashboard wireframes and component specifications by Repaso; approved by Costanilla for Ababa's integration on 5/6 by Repaso, Costanilla.
 
 (5/6/2026)
 
