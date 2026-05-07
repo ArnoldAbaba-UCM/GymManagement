@@ -35,3 +35,13 @@ changes made by Ababa as per Costanilla via Mr Montecillo's advice.
 (5/6/2026)
 
 > Integration of the main dashboard interface and its primary system functionalities by Ababa.
+
+(5/7/2026)
+
+> UI improvements: refined error message placement and input field grouping per Diaz & Repaso feedback.
+
+> Aligned dashboard component spacing and added responsive adjustments to payment window and registration flow.
+
+> Implemented by Ababa, with backend validation support and UI logic review by Magbanua.
+
+> Changes reviewed by Costanilla.
