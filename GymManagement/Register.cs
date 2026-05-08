@@ -67,6 +67,8 @@ namespace GymManagement
 
         private void btn_CompleteRegistration_Click(object sender, EventArgs e)
         {
+            loginForm loginForm = new loginForm();
+            loginForm.Show();
             this.Hide();
         }
 

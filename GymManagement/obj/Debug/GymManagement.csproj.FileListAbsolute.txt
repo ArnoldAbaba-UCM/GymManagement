@@ -8,3 +8,4 @@ D:\jm\Visual Studio\Projects\GymManagement\GymManagement\obj\Debug\GymManagement
 D:\jm\Visual Studio\Projects\GymManagement\GymManagement\obj\Debug\GymManagement.pdb
 D:\jm\Visual Studio\Projects\GymManagement\GymManagement\obj\Debug\GymManagement.Register.resources
 D:\jm\Visual Studio\Projects\GymManagement\GymManagement\obj\Debug\GymManagement.loginForm.resources
+D:\jm\Visual Studio\Projects\GymManagement\GymManagement\obj\Debug\GymManagement.dashboardForm.resources

@@ -694,7 +694,7 @@
             this.pl_Plan.Controls.Add(this.lbl_Price);
             this.pl_Plan.Controls.Add(this.txt_Plan);
             this.pl_Plan.Controls.Add(this.lbl_SelectPlan);
-            this.pl_Plan.Location = new System.Drawing.Point(0, 80);
+            this.pl_Plan.Location = new System.Drawing.Point(418, 12);
             this.pl_Plan.Name = "pl_Plan";
             this.pl_Plan.Size = new System.Drawing.Size(412, 240);
             this.pl_Plan.TabIndex = 19;
@@ -710,7 +710,7 @@
             this.pl_Payment.Controls.Add(this.lbl_PaymentDate);
             this.pl_Payment.Controls.Add(this.cmb_Month1);
             this.pl_Payment.Controls.Add(this.txt_Amount);
-            this.pl_Payment.Location = new System.Drawing.Point(0, 77);
+            this.pl_Payment.Location = new System.Drawing.Point(545, 225);
             this.pl_Payment.Name = "pl_Payment";
             this.pl_Payment.Size = new System.Drawing.Size(412, 243);
             this.pl_Payment.TabIndex = 22;
@@ -985,7 +985,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(411, 389);
+            this.ClientSize = new System.Drawing.Size(989, 522);
             this.Controls.Add(this.btn_CompleteRegistration);
             this.Controls.Add(this.btn_Next);
             this.Controls.Add(this.pl_Payment);
@@ -996,6 +996,7 @@
             this.Controls.Add(this.btn_Personal);
             this.Controls.Add(this.pl_createYourMembership);
             this.Name = "Register";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
             this.pl_createYourMembership.ResumeLayout(false);
             this.pl_createYourMembership.PerformLayout();

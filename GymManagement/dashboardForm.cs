@@ -16,5 +16,17 @@ namespace GymManagement
         {
             InitializeComponent();
         }
+
+        private void btn_RenewEditPlan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Logout_Click(object sender, EventArgs e)
+        {
+            loginForm loginForm = new loginForm();
+            loginForm.Show();
+            this.Hide();
+        }
     }
 }

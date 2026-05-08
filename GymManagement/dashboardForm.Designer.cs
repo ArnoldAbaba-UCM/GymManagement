@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.pl_Welcome = new System.Windows.Forms.Panel();
-            this.lbl_WelcomeName = new System.Windows.Forms.Label();
             this.btn_Logout = new System.Windows.Forms.Button();
+            this.lbl_WelcomeName = new System.Windows.Forms.Label();
             this.pl_Status = new System.Windows.Forms.Panel();
-            this.lbl_Member = new System.Windows.Forms.Label();
-            this.lbl_JoinedDate = new System.Windows.Forms.Label();
-            this.lbl_Credit = new System.Windows.Forms.Label();
             this.lbl_Status = new System.Windows.Forms.Label();
+            this.lbl_Credit = new System.Windows.Forms.Label();
+            this.lbl_JoinedDate = new System.Windows.Forms.Label();
+            this.lbl_Member = new System.Windows.Forms.Label();
             this.btn_RenewEditPlan = new System.Windows.Forms.Button();
             this.btn_ViewTransactions = new System.Windows.Forms.Button();
             this.btn_EditProfile = new System.Windows.Forms.Button();
@@ -56,16 +56,6 @@
             this.pl_Welcome.Size = new System.Drawing.Size(780, 40);
             this.pl_Welcome.TabIndex = 0;
             // 
-            // lbl_WelcomeName
-            // 
-            this.lbl_WelcomeName.AutoSize = true;
-            this.lbl_WelcomeName.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbl_WelcomeName.Location = new System.Drawing.Point(14, 14);
-            this.lbl_WelcomeName.Name = "lbl_WelcomeName";
-            this.lbl_WelcomeName.Size = new System.Drawing.Size(89, 13);
-            this.lbl_WelcomeName.TabIndex = 0;
-            this.lbl_WelcomeName.Text = "Welcome, Name!";
-            // 
             // btn_Logout
             // 
             this.btn_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -77,6 +67,17 @@
             this.btn_Logout.TabStop = false;
             this.btn_Logout.Text = "Log out";
             this.btn_Logout.UseVisualStyleBackColor = true;
+            this.btn_Logout.Click += new System.EventHandler(this.btn_Logout_Click);
+            // 
+            // lbl_WelcomeName
+            // 
+            this.lbl_WelcomeName.AutoSize = true;
+            this.lbl_WelcomeName.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_WelcomeName.Location = new System.Drawing.Point(14, 14);
+            this.lbl_WelcomeName.Name = "lbl_WelcomeName";
+            this.lbl_WelcomeName.Size = new System.Drawing.Size(89, 13);
+            this.lbl_WelcomeName.TabIndex = 0;
+            this.lbl_WelcomeName.Text = "Welcome, Name!";
             // 
             // pl_Status
             // 
@@ -90,23 +91,14 @@
             this.pl_Status.Size = new System.Drawing.Size(690, 115);
             this.pl_Status.TabIndex = 1;
             // 
-            // lbl_Member
+            // lbl_Status
             // 
-            this.lbl_Member.AutoSize = true;
-            this.lbl_Member.Location = new System.Drawing.Point(30, 21);
-            this.lbl_Member.Name = "lbl_Member";
-            this.lbl_Member.Size = new System.Drawing.Size(51, 13);
-            this.lbl_Member.TabIndex = 0;
-            this.lbl_Member.Text = "Member: ";
-            // 
-            // lbl_JoinedDate
-            // 
-            this.lbl_JoinedDate.AutoSize = true;
-            this.lbl_JoinedDate.Location = new System.Drawing.Point(30, 67);
-            this.lbl_JoinedDate.Name = "lbl_JoinedDate";
-            this.lbl_JoinedDate.Size = new System.Drawing.Size(41, 13);
-            this.lbl_JoinedDate.TabIndex = 1;
-            this.lbl_JoinedDate.Text = "Joined:";
+            this.lbl_Status.AutoSize = true;
+            this.lbl_Status.Location = new System.Drawing.Point(559, 67);
+            this.lbl_Status.Name = "lbl_Status";
+            this.lbl_Status.Size = new System.Drawing.Size(40, 13);
+            this.lbl_Status.TabIndex = 3;
+            this.lbl_Status.Text = "Status:";
             // 
             // lbl_Credit
             // 
@@ -117,14 +109,23 @@
             this.lbl_Credit.TabIndex = 2;
             this.lbl_Credit.Text = "Credit:";
             // 
-            // lbl_Status
+            // lbl_JoinedDate
             // 
-            this.lbl_Status.AutoSize = true;
-            this.lbl_Status.Location = new System.Drawing.Point(559, 67);
-            this.lbl_Status.Name = "lbl_Status";
-            this.lbl_Status.Size = new System.Drawing.Size(40, 13);
-            this.lbl_Status.TabIndex = 3;
-            this.lbl_Status.Text = "Status:";
+            this.lbl_JoinedDate.AutoSize = true;
+            this.lbl_JoinedDate.Location = new System.Drawing.Point(30, 67);
+            this.lbl_JoinedDate.Name = "lbl_JoinedDate";
+            this.lbl_JoinedDate.Size = new System.Drawing.Size(41, 13);
+            this.lbl_JoinedDate.TabIndex = 1;
+            this.lbl_JoinedDate.Text = "Joined:";
+            // 
+            // lbl_Member
+            // 
+            this.lbl_Member.AutoSize = true;
+            this.lbl_Member.Location = new System.Drawing.Point(30, 21);
+            this.lbl_Member.Name = "lbl_Member";
+            this.lbl_Member.Size = new System.Drawing.Size(51, 13);
+            this.lbl_Member.TabIndex = 0;
+            this.lbl_Member.Text = "Member: ";
             // 
             // btn_RenewEditPlan
             // 
@@ -135,6 +136,7 @@
             this.btn_RenewEditPlan.TabIndex = 2;
             this.btn_RenewEditPlan.Text = "Renew / Change Plan";
             this.btn_RenewEditPlan.UseVisualStyleBackColor = true;
+            this.btn_RenewEditPlan.Click += new System.EventHandler(this.btn_RenewEditPlan_Click);
             // 
             // btn_ViewTransactions
             // 
@@ -186,6 +188,7 @@
             this.Controls.Add(this.pl_Status);
             this.Controls.Add(this.pl_Welcome);
             this.Name = "dashboardForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "dashboardForm";
             this.pl_Welcome.ResumeLayout(false);
             this.pl_Welcome.PerformLayout();
