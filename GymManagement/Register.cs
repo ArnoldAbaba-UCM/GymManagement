@@ -7,12 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+using System.Data;
+using System.Data.OleDb;
 
 namespace GymManagement
 {
     public partial class Register : Form
     {
-        int nextCounter=1;
+        OleDbConnection con = new OleDbConnection(
+            @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source="
+            + Application.StartupPath + @"\GymDB.accdb");
 
         public Register()
         {
@@ -42,27 +47,17 @@ namespace GymManagement
 
         private void btn_Next_Click(object sender, EventArgs e)
         {
-            switch (nextCounter) {
-                case 2:
-                    pl_Personal.Show();
-                    pl_Plan.Hide();
-                    pl_Payment.Hide();
-                    break;
-                case 3:
-                    pl_Personal.Hide();
-                    pl_Plan.Show();
-                    pl_Payment.Hide();
-                    break;
-                case 4:
-                    pl_Payment.Show();
-                    pl_Plan.Hide();
-                    pl_Personal.Hide();
-                    break;
-                case 5:
-                    nextCounter = 1;
-                    break;
+            if (pl_Personal.Visible)
+            {
+                pl_Personal.Hide();
+                pl_Plan.Show();
+                pl_Payment.Hide();
             }
-            nextCounter++;
+            else if (pl_Plan.Visible)
+            {
+                pl_Plan.Hide();
+                pl_Payment.Show();
+            }
         }
 
         private void btn_CompleteRegistration_Click(object sender, EventArgs e)
@@ -70,6 +65,8 @@ namespace GymManagement
             loginForm loginForm = new loginForm();
             loginForm.Show();
             this.Hide();
+            MessageBox.Show(dtp_DateOfBirth.Value + " " + txt_LastName.Text);
+
         }
 
     }

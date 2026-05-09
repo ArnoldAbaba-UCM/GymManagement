@@ -34,8 +34,6 @@
             this.btn_Plan = new System.Windows.Forms.Button();
             this.btn_Payment = new System.Windows.Forms.Button();
             this.pl_Personal = new System.Windows.Forms.Panel();
-            this.cmb_Year = new System.Windows.Forms.ComboBox();
-            this.cmb_Day = new System.Windows.Forms.ComboBox();
             this.lbl_BirthDate = new System.Windows.Forms.Label();
             this.lbl_PhoneNumber = new System.Windows.Forms.Label();
             this.lbl_Password = new System.Windows.Forms.Label();
@@ -46,28 +44,24 @@
             this.txt_Password = new System.Windows.Forms.TextBox();
             this.txt_Email = new System.Windows.Forms.TextBox();
             this.txt_LastName = new System.Windows.Forms.TextBox();
-            this.cmb_Month = new System.Windows.Forms.ComboBox();
             this.txt_FirstName = new System.Windows.Forms.TextBox();
             this.lbl_SelectPlan = new System.Windows.Forms.Label();
-            this.txt_Plan = new System.Windows.Forms.TextBox();
             this.lbl_Price = new System.Windows.Forms.Label();
             this.lbl_TotalPrice = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.lbl_StartDate = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pl_Plan = new System.Windows.Forms.Panel();
             this.pl_Payment = new System.Windows.Forms.Panel();
             this.lbl_Method = new System.Windows.Forms.Label();
             this.lbl_Amount = new System.Windows.Forms.Label();
             this.cmb_Method = new System.Windows.Forms.ComboBox();
-            this.cmb_Year1 = new System.Windows.Forms.ComboBox();
-            this.cmb_Day1 = new System.Windows.Forms.ComboBox();
             this.lbl_PaymentDate = new System.Windows.Forms.Label();
-            this.cmb_Month1 = new System.Windows.Forms.ComboBox();
             this.txt_Amount = new System.Windows.Forms.TextBox();
             this.btn_Next = new System.Windows.Forms.Button();
             this.btn_CompleteRegistration = new System.Windows.Forms.Button();
+            this.dtp_DateOfBirth = new System.Windows.Forms.DateTimePicker();
+            this.dtp_StartDate = new System.Windows.Forms.DateTimePicker();
+            this.dtp_PaymentDate = new System.Windows.Forms.DateTimePicker();
+            this.cmb_Plan = new System.Windows.Forms.ComboBox();
             this.pl_createYourMembership.SuspendLayout();
             this.pl_Personal.SuspendLayout();
             this.pl_Plan.SuspendLayout();
@@ -132,8 +126,7 @@
             // 
             // pl_Personal
             // 
-            this.pl_Personal.Controls.Add(this.cmb_Year);
-            this.pl_Personal.Controls.Add(this.cmb_Day);
+            this.pl_Personal.Controls.Add(this.dtp_DateOfBirth);
             this.pl_Personal.Controls.Add(this.lbl_BirthDate);
             this.pl_Personal.Controls.Add(this.lbl_PhoneNumber);
             this.pl_Personal.Controls.Add(this.lbl_Password);
@@ -144,172 +137,11 @@
             this.pl_Personal.Controls.Add(this.txt_Password);
             this.pl_Personal.Controls.Add(this.txt_Email);
             this.pl_Personal.Controls.Add(this.txt_LastName);
-            this.pl_Personal.Controls.Add(this.cmb_Month);
             this.pl_Personal.Controls.Add(this.txt_FirstName);
             this.pl_Personal.Location = new System.Drawing.Point(0, 83);
             this.pl_Personal.Name = "pl_Personal";
             this.pl_Personal.Size = new System.Drawing.Size(412, 240);
             this.pl_Personal.TabIndex = 10;
-            // 
-            // cmb_Year
-            // 
-            this.cmb_Year.AutoCompleteCustomSource.AddRange(new string[] {
-            "2026",
-            "2025",
-            "2024",
-            "2023",
-            "2022",
-            "2021",
-            "2020",
-            "2019",
-            "2018",
-            "2017",
-            "2016",
-            "2015",
-            "2014",
-            "2013",
-            "2012",
-            "2011",
-            "2010",
-            "2009",
-            "2008",
-            "2007",
-            "2006",
-            "2005",
-            "2004",
-            "2003",
-            "2002",
-            "2001",
-            "2000",
-            "1999",
-            "1998",
-            "1997",
-            "1996",
-            "1995",
-            "1994",
-            "1993",
-            "1992",
-            "1991",
-            "1990",
-            "1989",
-            "1988",
-            "1987",
-            "1986",
-            "1985",
-            "1984",
-            "1983",
-            "1982",
-            "1981",
-            "1980",
-            "1979",
-            "1978",
-            "1977",
-            "1976",
-            "1975",
-            "1974",
-            "1973",
-            "1972",
-            "1971",
-            "1970",
-            "1969",
-            "1968",
-            "1967",
-            "1966",
-            "1965",
-            "1964",
-            "1963",
-            "1962",
-            "1961",
-            "1960",
-            "1959",
-            "1958",
-            "1957",
-            "1956",
-            "1955",
-            "1954",
-            "1953",
-            "1952",
-            "1951",
-            "1950"});
-            this.cmb_Year.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_Year.FormattingEnabled = true;
-            this.cmb_Year.Location = new System.Drawing.Point(285, 185);
-            this.cmb_Year.Name = "cmb_Year";
-            this.cmb_Year.Size = new System.Drawing.Size(73, 28);
-            this.cmb_Year.TabIndex = 17;
-            // 
-            // cmb_Day
-            // 
-            this.cmb_Day.AutoCompleteCustomSource.AddRange(new string[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31"});
-            this.cmb_Day.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_Day.FormattingEnabled = true;
-            this.cmb_Day.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31"});
-            this.cmb_Day.Location = new System.Drawing.Point(210, 185);
-            this.cmb_Day.Name = "cmb_Day";
-            this.cmb_Day.Size = new System.Drawing.Size(69, 28);
-            this.cmb_Day.TabIndex = 16;
             // 
             // lbl_BirthDate
             // 
@@ -398,41 +230,6 @@
             this.txt_LastName.Size = new System.Drawing.Size(218, 26);
             this.txt_LastName.TabIndex = 6;
             // 
-            // cmb_Month
-            // 
-            this.cmb_Month.AutoCompleteCustomSource.AddRange(new string[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"});
-            this.cmb_Month.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_Month.FormattingEnabled = true;
-            this.cmb_Month.Items.AddRange(new object[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"});
-            this.cmb_Month.Location = new System.Drawing.Point(140, 185);
-            this.cmb_Month.Name = "cmb_Month";
-            this.cmb_Month.Size = new System.Drawing.Size(64, 28);
-            this.cmb_Month.TabIndex = 5;
-            // 
             // txt_FirstName
             // 
             this.txt_FirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -449,18 +246,6 @@
             this.lbl_SelectPlan.Size = new System.Drawing.Size(64, 13);
             this.lbl_SelectPlan.TabIndex = 0;
             this.lbl_SelectPlan.Text = "Select Plan:";
-            // 
-            // txt_Plan
-            // 
-            this.txt_Plan.AutoCompleteCustomSource.AddRange(new string[] {
-            "Monthly - ₱800",
-            "Quarterly - ₱1200",
-            "Yearly - ₱1500"});
-            this.txt_Plan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Plan.Location = new System.Drawing.Point(126, 33);
-            this.txt_Plan.Name = "txt_Plan";
-            this.txt_Plan.Size = new System.Drawing.Size(189, 26);
-            this.txt_Plan.TabIndex = 1;
             // 
             // lbl_Price
             // 
@@ -480,41 +265,6 @@
             this.lbl_TotalPrice.TabIndex = 3;
             this.lbl_TotalPrice.Text = "₱";
             // 
-            // comboBox3
-            // 
-            this.comboBox3.AutoCompleteCustomSource.AddRange(new string[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"});
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"});
-            this.comboBox3.Location = new System.Drawing.Point(126, 121);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(56, 28);
-            this.comboBox3.TabIndex = 18;
-            // 
             // lbl_StartDate
             // 
             this.lbl_StartDate.AutoSize = true;
@@ -524,175 +274,13 @@
             this.lbl_StartDate.TabIndex = 19;
             this.lbl_StartDate.Text = "Start Date:";
             // 
-            // comboBox2
-            // 
-            this.comboBox2.AutoCompleteCustomSource.AddRange(new string[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31"});
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31"});
-            this.comboBox2.Location = new System.Drawing.Point(188, 121);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(54, 28);
-            this.comboBox2.TabIndex = 20;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.AutoCompleteCustomSource.AddRange(new string[] {
-            "2026",
-            "2025",
-            "2024",
-            "2023",
-            "2022",
-            "2021",
-            "2020",
-            "2019",
-            "2018",
-            "2017",
-            "2016",
-            "2015",
-            "2014",
-            "2013",
-            "2012",
-            "2011",
-            "2010",
-            "2009",
-            "2008",
-            "2007",
-            "2006",
-            "2005",
-            "2004",
-            "2003",
-            "2002",
-            "2001",
-            "2000",
-            "1999",
-            "1998",
-            "1997",
-            "1996",
-            "1995",
-            "1994",
-            "1993",
-            "1992",
-            "1991",
-            "1990",
-            "1989",
-            "1988",
-            "1987",
-            "1986",
-            "1985",
-            "1984",
-            "1983",
-            "1982",
-            "1981",
-            "1980",
-            "1979",
-            "1978",
-            "1977",
-            "1976",
-            "1975",
-            "1974",
-            "1973",
-            "1972",
-            "1971",
-            "1970",
-            "1969",
-            "1968",
-            "1967",
-            "1966",
-            "1965",
-            "1964",
-            "1963",
-            "1962",
-            "1961",
-            "1960",
-            "1959",
-            "1958",
-            "1957",
-            "1956",
-            "1955",
-            "1954",
-            "1953",
-            "1952",
-            "1951",
-            "1950"});
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(248, 121);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(67, 28);
-            this.comboBox1.TabIndex = 21;
-            // 
             // pl_Plan
             // 
-            this.pl_Plan.Controls.Add(this.comboBox1);
-            this.pl_Plan.Controls.Add(this.comboBox2);
+            this.pl_Plan.Controls.Add(this.cmb_Plan);
+            this.pl_Plan.Controls.Add(this.dtp_StartDate);
             this.pl_Plan.Controls.Add(this.lbl_StartDate);
-            this.pl_Plan.Controls.Add(this.comboBox3);
             this.pl_Plan.Controls.Add(this.lbl_TotalPrice);
             this.pl_Plan.Controls.Add(this.lbl_Price);
-            this.pl_Plan.Controls.Add(this.txt_Plan);
             this.pl_Plan.Controls.Add(this.lbl_SelectPlan);
             this.pl_Plan.Location = new System.Drawing.Point(418, 12);
             this.pl_Plan.Name = "pl_Plan";
@@ -702,13 +290,11 @@
             // 
             // pl_Payment
             // 
+            this.pl_Payment.Controls.Add(this.dtp_PaymentDate);
             this.pl_Payment.Controls.Add(this.lbl_Method);
             this.pl_Payment.Controls.Add(this.lbl_Amount);
             this.pl_Payment.Controls.Add(this.cmb_Method);
-            this.pl_Payment.Controls.Add(this.cmb_Year1);
-            this.pl_Payment.Controls.Add(this.cmb_Day1);
             this.pl_Payment.Controls.Add(this.lbl_PaymentDate);
-            this.pl_Payment.Controls.Add(this.cmb_Month1);
             this.pl_Payment.Controls.Add(this.txt_Amount);
             this.pl_Payment.Location = new System.Drawing.Point(545, 225);
             this.pl_Payment.Name = "pl_Payment";
@@ -747,166 +333,6 @@
             this.cmb_Method.Size = new System.Drawing.Size(189, 28);
             this.cmb_Method.TabIndex = 26;
             // 
-            // cmb_Year1
-            // 
-            this.cmb_Year1.AutoCompleteCustomSource.AddRange(new string[] {
-            "2026",
-            "2025",
-            "2024",
-            "2023",
-            "2022",
-            "2021",
-            "2020",
-            "2019",
-            "2018",
-            "2017",
-            "2016",
-            "2015",
-            "2014",
-            "2013",
-            "2012",
-            "2011",
-            "2010",
-            "2009",
-            "2008",
-            "2007",
-            "2006",
-            "2005",
-            "2004",
-            "2003",
-            "2002",
-            "2001",
-            "2000",
-            "1999",
-            "1998",
-            "1997",
-            "1996",
-            "1995",
-            "1994",
-            "1993",
-            "1992",
-            "1991",
-            "1990",
-            "1989",
-            "1988",
-            "1987",
-            "1986",
-            "1985",
-            "1984",
-            "1983",
-            "1982",
-            "1981",
-            "1980",
-            "1979",
-            "1978",
-            "1977",
-            "1976",
-            "1975",
-            "1974",
-            "1973",
-            "1972",
-            "1971",
-            "1970",
-            "1969",
-            "1968",
-            "1967",
-            "1966",
-            "1965",
-            "1964",
-            "1963",
-            "1962",
-            "1961",
-            "1960",
-            "1959",
-            "1958",
-            "1957",
-            "1956",
-            "1955",
-            "1954",
-            "1953",
-            "1952",
-            "1951",
-            "1950"});
-            this.cmb_Year1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_Year1.FormattingEnabled = true;
-            this.cmb_Year1.Location = new System.Drawing.Point(248, 76);
-            this.cmb_Year1.Name = "cmb_Year1";
-            this.cmb_Year1.Size = new System.Drawing.Size(67, 28);
-            this.cmb_Year1.TabIndex = 25;
-            // 
-            // cmb_Day1
-            // 
-            this.cmb_Day1.AutoCompleteCustomSource.AddRange(new string[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31"});
-            this.cmb_Day1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_Day1.FormattingEnabled = true;
-            this.cmb_Day1.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31"});
-            this.cmb_Day1.Location = new System.Drawing.Point(188, 76);
-            this.cmb_Day1.Name = "cmb_Day1";
-            this.cmb_Day1.Size = new System.Drawing.Size(54, 28);
-            this.cmb_Day1.TabIndex = 24;
-            // 
             // lbl_PaymentDate
             // 
             this.lbl_PaymentDate.AutoSize = true;
@@ -915,41 +341,6 @@
             this.lbl_PaymentDate.Size = new System.Drawing.Size(77, 13);
             this.lbl_PaymentDate.TabIndex = 23;
             this.lbl_PaymentDate.Text = "Payment Date:";
-            // 
-            // cmb_Month1
-            // 
-            this.cmb_Month1.AutoCompleteCustomSource.AddRange(new string[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"});
-            this.cmb_Month1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_Month1.FormattingEnabled = true;
-            this.cmb_Month1.Items.AddRange(new object[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"});
-            this.cmb_Month1.Location = new System.Drawing.Point(126, 76);
-            this.cmb_Month1.Name = "cmb_Month1";
-            this.cmb_Month1.Size = new System.Drawing.Size(56, 28);
-            this.cmb_Month1.TabIndex = 22;
             // 
             // txt_Amount
             // 
@@ -980,6 +371,43 @@
             this.btn_CompleteRegistration.Text = "Complete Registration";
             this.btn_CompleteRegistration.UseVisualStyleBackColor = true;
             this.btn_CompleteRegistration.Click += new System.EventHandler(this.btn_CompleteRegistration_Click);
+            // 
+            // dtp_DateOfBirth
+            // 
+            this.dtp_DateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_DateOfBirth.Location = new System.Drawing.Point(140, 188);
+            this.dtp_DateOfBirth.Name = "dtp_DateOfBirth";
+            this.dtp_DateOfBirth.Size = new System.Drawing.Size(218, 22);
+            this.dtp_DateOfBirth.TabIndex = 25;
+            // 
+            // dtp_StartDate
+            // 
+            this.dtp_StartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_StartDate.Location = new System.Drawing.Point(126, 128);
+            this.dtp_StartDate.Name = "dtp_StartDate";
+            this.dtp_StartDate.Size = new System.Drawing.Size(189, 22);
+            this.dtp_StartDate.TabIndex = 26;
+            // 
+            // dtp_PaymentDate
+            // 
+            this.dtp_PaymentDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_PaymentDate.Location = new System.Drawing.Point(126, 82);
+            this.dtp_PaymentDate.Name = "dtp_PaymentDate";
+            this.dtp_PaymentDate.Size = new System.Drawing.Size(189, 22);
+            this.dtp_PaymentDate.TabIndex = 27;
+            // 
+            // cmb_Plan
+            // 
+            this.cmb_Plan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Plan.FormattingEnabled = true;
+            this.cmb_Plan.Items.AddRange(new object[] {
+            "Monthly - ₱800",
+            "Quarterly - ₱1200",
+            "Yearly - ₱1500"});
+            this.cmb_Plan.Location = new System.Drawing.Point(126, 28);
+            this.cmb_Plan.Name = "cmb_Plan";
+            this.cmb_Plan.Size = new System.Drawing.Size(189, 28);
+            this.cmb_Plan.TabIndex = 29;
             // 
             // Register
             // 
@@ -1023,34 +451,28 @@
         private System.Windows.Forms.TextBox txt_Password;
         private System.Windows.Forms.TextBox txt_Email;
         private System.Windows.Forms.TextBox txt_LastName;
-        private System.Windows.Forms.ComboBox cmb_Month;
         private System.Windows.Forms.TextBox txt_FirstName;
         private System.Windows.Forms.Label lbl_LastName;
         private System.Windows.Forms.Label lbl_Email;
         private System.Windows.Forms.Label lbl_Password;
         private System.Windows.Forms.Label lbl_BirthDate;
         private System.Windows.Forms.Label lbl_PhoneNumber;
-        private System.Windows.Forms.ComboBox cmb_Year;
-        private System.Windows.Forms.ComboBox cmb_Day;
         private System.Windows.Forms.Label lbl_SelectPlan;
-        private System.Windows.Forms.TextBox txt_Plan;
         private System.Windows.Forms.Label lbl_Price;
         private System.Windows.Forms.Label lbl_TotalPrice;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label lbl_StartDate;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel pl_Plan;
         private System.Windows.Forms.Panel pl_Payment;
         private System.Windows.Forms.Label lbl_Method;
         private System.Windows.Forms.Label lbl_Amount;
         private System.Windows.Forms.ComboBox cmb_Method;
-        private System.Windows.Forms.ComboBox cmb_Year1;
-        private System.Windows.Forms.ComboBox cmb_Day1;
         private System.Windows.Forms.Label lbl_PaymentDate;
-        private System.Windows.Forms.ComboBox cmb_Month1;
         private System.Windows.Forms.TextBox txt_Amount;
         private System.Windows.Forms.Button btn_Next;
         private System.Windows.Forms.Button btn_CompleteRegistration;
+        private System.Windows.Forms.DateTimePicker dtp_DateOfBirth;
+        private System.Windows.Forms.DateTimePicker dtp_StartDate;
+        private System.Windows.Forms.DateTimePicker dtp_PaymentDate;
+        private System.Windows.Forms.ComboBox cmb_Plan;
     }
 }
