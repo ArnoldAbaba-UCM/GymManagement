@@ -38,13 +38,13 @@
             this.lbl_JoinedDate = new System.Windows.Forms.Label();
             this.lbl_Member = new System.Windows.Forms.Label();
             this.btn_RenewEditPlan = new System.Windows.Forms.Button();
-            this.btn_ViewTransactions = new System.Windows.Forms.Button();
             this.btn_EditProfile = new System.Windows.Forms.Button();
             this.lbl_RecentPayments = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_RecentTransaction = new System.Windows.Forms.DataGridView();
+            this.btn_TopUp = new System.Windows.Forms.Button();
             this.pl_Welcome.SuspendLayout();
             this.pl_Status.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_RecentTransaction)).BeginInit();
             this.SuspendLayout();
             // 
             // pl_Welcome
@@ -140,7 +140,7 @@
             this.btn_RenewEditPlan.BackColor = System.Drawing.Color.Chocolate;
             this.btn_RenewEditPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_RenewEditPlan.ForeColor = System.Drawing.Color.White;
-            this.btn_RenewEditPlan.Location = new System.Drawing.Point(101, 221);
+            this.btn_RenewEditPlan.Location = new System.Drawing.Point(144, 192);
             this.btn_RenewEditPlan.Name = "btn_RenewEditPlan";
             this.btn_RenewEditPlan.Size = new System.Drawing.Size(144, 41);
             this.btn_RenewEditPlan.TabIndex = 2;
@@ -148,49 +148,51 @@
             this.btn_RenewEditPlan.UseVisualStyleBackColor = false;
             this.btn_RenewEditPlan.Click += new System.EventHandler(this.btn_RenewEditPlan_Click);
             // 
-            // btn_ViewTransactions
-            // 
-            this.btn_ViewTransactions.BackColor = System.Drawing.Color.Chocolate;
-            this.btn_ViewTransactions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ViewTransactions.ForeColor = System.Drawing.Color.White;
-            this.btn_ViewTransactions.Location = new System.Drawing.Point(251, 221);
-            this.btn_ViewTransactions.Name = "btn_ViewTransactions";
-            this.btn_ViewTransactions.Size = new System.Drawing.Size(144, 41);
-            this.btn_ViewTransactions.TabIndex = 3;
-            this.btn_ViewTransactions.Text = "View Transactions";
-            this.btn_ViewTransactions.UseVisualStyleBackColor = false;
-            // 
             // btn_EditProfile
             // 
             this.btn_EditProfile.BackColor = System.Drawing.Color.Chocolate;
             this.btn_EditProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_EditProfile.ForeColor = System.Drawing.Color.White;
-            this.btn_EditProfile.Location = new System.Drawing.Point(401, 221);
+            this.btn_EditProfile.Location = new System.Drawing.Point(294, 192);
             this.btn_EditProfile.Name = "btn_EditProfile";
             this.btn_EditProfile.Size = new System.Drawing.Size(104, 41);
             this.btn_EditProfile.TabIndex = 4;
             this.btn_EditProfile.Text = "Edit Profile";
             this.btn_EditProfile.UseVisualStyleBackColor = false;
+            this.btn_EditProfile.Click += new System.EventHandler(this.btn_EditProfile_Click);
             // 
             // lbl_RecentPayments
             // 
             this.lbl_RecentPayments.AutoSize = true;
             this.lbl_RecentPayments.BackColor = System.Drawing.Color.SaddleBrown;
             this.lbl_RecentPayments.ForeColor = System.Drawing.Color.White;
-            this.lbl_RecentPayments.Location = new System.Drawing.Point(62, 286);
+            this.lbl_RecentPayments.Location = new System.Drawing.Point(58, 236);
             this.lbl_RecentPayments.Name = "lbl_RecentPayments";
-            this.lbl_RecentPayments.Size = new System.Drawing.Size(86, 13);
+            this.lbl_RecentPayments.Size = new System.Drawing.Size(101, 13);
             this.lbl_RecentPayments.TabIndex = 4;
-            this.lbl_RecentPayments.Text = "Recent Payment";
+            this.lbl_RecentPayments.Text = "Recent Transaction";
             // 
-            // dataGridView1
+            // dgv_RecentTransaction
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.DarkSalmon;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(61, 333);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(671, 81);
-            this.dataGridView1.TabIndex = 5;
+            this.dgv_RecentTransaction.BackgroundColor = System.Drawing.Color.DarkSalmon;
+            this.dgv_RecentTransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_RecentTransaction.Location = new System.Drawing.Point(42, 252);
+            this.dgv_RecentTransaction.Name = "dgv_RecentTransaction";
+            this.dgv_RecentTransaction.Size = new System.Drawing.Size(690, 162);
+            this.dgv_RecentTransaction.TabIndex = 5;
+            // 
+            // btn_TopUp
+            // 
+            this.btn_TopUp.BackColor = System.Drawing.Color.Chocolate;
+            this.btn_TopUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_TopUp.ForeColor = System.Drawing.Color.White;
+            this.btn_TopUp.Location = new System.Drawing.Point(42, 192);
+            this.btn_TopUp.Name = "btn_TopUp";
+            this.btn_TopUp.Size = new System.Drawing.Size(96, 41);
+            this.btn_TopUp.TabIndex = 6;
+            this.btn_TopUp.Text = "Top-up";
+            this.btn_TopUp.UseVisualStyleBackColor = false;
+            this.btn_TopUp.Click += new System.EventHandler(this.btn_TopUp_Click);
             // 
             // dashboardForm
             // 
@@ -200,10 +202,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(777, 426);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btn_TopUp);
+            this.Controls.Add(this.dgv_RecentTransaction);
             this.Controls.Add(this.lbl_RecentPayments);
             this.Controls.Add(this.btn_EditProfile);
-            this.Controls.Add(this.btn_ViewTransactions);
             this.Controls.Add(this.btn_RenewEditPlan);
             this.Controls.Add(this.pl_Status);
             this.Controls.Add(this.pl_Welcome);
@@ -214,7 +216,7 @@
             this.pl_Welcome.PerformLayout();
             this.pl_Status.ResumeLayout(false);
             this.pl_Status.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_RecentTransaction)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,9 +233,9 @@
         private System.Windows.Forms.Label lbl_JoinedDate;
         private System.Windows.Forms.Label lbl_Member;
         private System.Windows.Forms.Button btn_RenewEditPlan;
-        private System.Windows.Forms.Button btn_ViewTransactions;
         private System.Windows.Forms.Button btn_EditProfile;
         private System.Windows.Forms.Label lbl_RecentPayments;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_RecentTransaction;
+        private System.Windows.Forms.Button btn_TopUp;
     }
 }

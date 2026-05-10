@@ -20,3 +20,6 @@ C:\Users\sensu\OneDrive\Documents\Visual Studio 2012\Projects\GymManagement\GymM
 C:\Users\sensu\OneDrive\Documents\Visual Studio 2012\Projects\GymManagement\GymManagement\obj\Debug\GymManagement.Properties.Resources.resources
 C:\Users\sensu\OneDrive\Documents\Visual Studio 2012\Projects\GymManagement\GymManagement\obj\Debug\GymManagement.Register.resources
 C:\Users\sensu\OneDrive\Documents\Visual Studio 2012\Projects\GymManagement\GymManagement\obj\Debug\GymManagement.csproj.GenerateResource.Cache
+D:\jm\Visual Studio\Projects\GymManagement\GymManagement\obj\Debug\GymManagement.editProfileForm.resources
+D:\jm\Visual Studio\Projects\GymManagement\GymManagement\obj\Debug\GymManagement.renewEditPlanForm.resources
+D:\jm\Visual Studio\Projects\GymManagement\GymManagement\obj\Debug\GymManagement.topUpForm.resources

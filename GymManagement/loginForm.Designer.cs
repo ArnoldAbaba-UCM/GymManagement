@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loginForm));
             this.pl_MemberLogin = new System.Windows.Forms.Panel();
             this.lbl_memberLogin = new System.Windows.Forms.Label();
-            this.txt_UsernameEmail = new System.Windows.Forms.TextBox();
+            this.txt_Email = new System.Windows.Forms.TextBox();
             this.lbl_UsernameEmail = new System.Windows.Forms.Label();
             this.lbl_Password = new System.Windows.Forms.Label();
             this.txt_Password = new System.Windows.Forms.TextBox();
@@ -63,15 +63,15 @@
             this.lbl_memberLogin.TabIndex = 0;
             this.lbl_memberLogin.Text = "Member Login";
             // 
-            // txt_UsernameEmail
+            // txt_Email
             // 
-            this.txt_UsernameEmail.BackColor = System.Drawing.Color.Wheat;
-            this.txt_UsernameEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_UsernameEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_UsernameEmail.Location = new System.Drawing.Point(53, 79);
-            this.txt_UsernameEmail.Name = "txt_UsernameEmail";
-            this.txt_UsernameEmail.Size = new System.Drawing.Size(233, 26);
-            this.txt_UsernameEmail.TabIndex = 1;
+            this.txt_Email.BackColor = System.Drawing.Color.Wheat;
+            this.txt_Email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Email.Location = new System.Drawing.Point(53, 79);
+            this.txt_Email.Name = "txt_Email";
+            this.txt_Email.Size = new System.Drawing.Size(233, 26);
+            this.txt_Email.TabIndex = 1;
             // 
             // lbl_UsernameEmail
             // 
@@ -163,7 +163,7 @@
             this.Controls.Add(this.txt_Password);
             this.Controls.Add(this.lbl_Password);
             this.Controls.Add(this.lbl_UsernameEmail);
-            this.Controls.Add(this.txt_UsernameEmail);
+            this.Controls.Add(this.txt_Email);
             this.Controls.Add(this.pl_MemberLogin);
             this.Name = "loginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -179,7 +179,7 @@
 
         private System.Windows.Forms.Panel pl_MemberLogin;
         private System.Windows.Forms.Label lbl_memberLogin;
-        private System.Windows.Forms.TextBox txt_UsernameEmail;
+        private System.Windows.Forms.TextBox txt_Email;
         private System.Windows.Forms.Label lbl_UsernameEmail;
         private System.Windows.Forms.Label lbl_Password;
         private System.Windows.Forms.TextBox txt_Password;

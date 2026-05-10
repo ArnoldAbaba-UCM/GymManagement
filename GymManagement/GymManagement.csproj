@@ -50,6 +50,12 @@
     <Compile Include="dashboardForm.Designer.cs">
       <DependentUpon>dashboardForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="editProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editProfileForm.Designer.cs">
+      <DependentUpon>editProfileForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="loginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,8 +70,23 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="renewEditPlanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="renewEditPlanForm.Designer.cs">
+      <DependentUpon>renewEditPlanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="topUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="topUpForm.Designer.cs">
+      <DependentUpon>topUpForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="dashboardForm.resx">
       <DependentUpon>dashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editProfileForm.resx">
+      <DependentUpon>editProfileForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="loginForm.resx">
       <DependentUpon>loginForm.cs</DependentUpon>
@@ -81,6 +102,12 @@
     </Compile>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="renewEditPlanForm.resx">
+      <DependentUpon>renewEditPlanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="topUpForm.resx">
+      <DependentUpon>topUpForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

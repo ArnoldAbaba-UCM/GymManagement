@@ -73,6 +73,7 @@ namespace GymManagement
             DateTime dob = dtp_DateOfBirth.Value.Date;
             DateTime startDate = dtp_StartDate.Value;
 
+            //Validation Checking parttt
             if (string.IsNullOrEmpty(firstName) ||
                 string.IsNullOrEmpty(lastName) ||
                 string.IsNullOrEmpty(email) ||
@@ -133,13 +134,62 @@ namespace GymManagement
                 return;
             }
 
+            decimal remainingCredit = amount - planPrice;
             InsertMember(
                 firstName, lastName, email, password,
-                phone, dob, planText, startDate, amountText
+                phone, dob, planText, startDate, remainingCredit.ToString()
             );
+
+            //Transactions part
+            string memberFullName = firstName + " " + lastName;
+            string txnSql = @"INSERT INTO Transactions 
+            (MemberName, Amount, Description, PaymentDate, PaymentMethod)
+            VALUES (@mname, @amt, @desc, @payDate, @method)";
+
+            try
+            {
+                //Top up recroding part
+                using (var cmd = new OleDbCommand(txnSql, con))
+                {
+                    cmd.Parameters.Add("@mname", OleDbType.VarWChar).Value = memberFullName;
+                    cmd.Parameters.Add("@amt", OleDbType.Currency).Value = amount;          // full top‑up
+                    cmd.Parameters.Add("@desc", OleDbType.VarWChar).Value = "Initial top‑up";
+                    cmd.Parameters.Add("@payDate", OleDbType.Date).Value = dtp_PaymentDate.Value;
+                    cmd.Parameters.Add("@method", OleDbType.VarWChar).Value = cmb_Method.Text;
+
+                    if (con.State == ConnectionState.Open) con.Close();
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+
+                //Plan fee deduction partt
+                using (var cmd = new OleDbCommand(txnSql, con))
+                {
+                    cmd.Parameters.Add("@mname", OleDbType.VarWChar).Value = memberFullName;
+                    cmd.Parameters.Add("@amt", OleDbType.Currency).Value = -planPrice;     // negative = fee
+                    cmd.Parameters.Add("@desc", OleDbType.VarWChar).Value = "Plan fee – " + planText;
+                    cmd.Parameters.Add("@payDate", OleDbType.Date).Value = startDate;      // or DateTime.Today
+                    cmd.Parameters.Add("@method", OleDbType.VarWChar).Value = DBNull.Value; // no payment method for deduction
+
+                    if (con.State == ConnectionState.Open) con.Close();
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error recording transaction: " + ex.Message, "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            this.Dispose();
+            loginForm loginForm = new loginForm();
+            loginForm.Show();
         }
 
-        private void InsertMember(string firstName, string lastName, string email, string password,
+        public void InsertMember(string firstName, string lastName, string email, string password,
                           string phone, DateTime dateOfBirth, string planText, DateTime startDate, string creditText)
         {
             decimal credit = 0;

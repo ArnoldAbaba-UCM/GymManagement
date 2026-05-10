@@ -61,6 +61,7 @@
             this.txt_Amount = new System.Windows.Forms.TextBox();
             this.btn_Next = new System.Windows.Forms.Button();
             this.btn_CompleteRegistration = new System.Windows.Forms.Button();
+            this.lbl_Message = new System.Windows.Forms.Label();
             this.pl_createYourMembership.SuspendLayout();
             this.pl_Personal.SuspendLayout();
             this.pl_Plan.SuspendLayout();
@@ -328,6 +329,7 @@
             // 
             this.pl_Payment.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pl_Payment.BackgroundImage")));
             this.pl_Payment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pl_Payment.Controls.Add(this.lbl_Message);
             this.pl_Payment.Controls.Add(this.dtp_PaymentDate);
             this.pl_Payment.Controls.Add(this.lbl_Method);
             this.pl_Payment.Controls.Add(this.lbl_Amount);
@@ -364,9 +366,9 @@
             this.lbl_Amount.BackColor = System.Drawing.Color.AntiqueWhite;
             this.lbl_Amount.Location = new System.Drawing.Point(43, 52);
             this.lbl_Amount.Name = "lbl_Amount";
-            this.lbl_Amount.Size = new System.Drawing.Size(98, 13);
+            this.lbl_Amount.Size = new System.Drawing.Size(89, 13);
             this.lbl_Amount.TabIndex = 27;
-            this.lbl_Amount.Text = "Amount(to Top up):";
+            this.lbl_Amount.Text = "Amount (Top-up):";
             // 
             // cmb_Method
             // 
@@ -423,6 +425,17 @@
             this.btn_CompleteRegistration.Text = "Complete Registration";
             this.btn_CompleteRegistration.UseVisualStyleBackColor = true;
             this.btn_CompleteRegistration.Click += new System.EventHandler(this.btn_CompleteRegistration_Click);
+            // 
+            // lbl_Message
+            // 
+            this.lbl_Message.AutoSize = true;
+            this.lbl_Message.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.lbl_Message.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Message.Location = new System.Drawing.Point(155, 27);
+            this.lbl_Message.Name = "lbl_Message";
+            this.lbl_Message.Size = new System.Drawing.Size(166, 13);
+            this.lbl_Message.TabIndex = 29;
+            this.lbl_Message.Text = "(this will go to your credit balance)";
             // 
             // Register
             // 
@@ -489,5 +502,6 @@
         private System.Windows.Forms.DateTimePicker dtp_StartDate;
         private System.Windows.Forms.DateTimePicker dtp_PaymentDate;
         private System.Windows.Forms.ComboBox cmb_Plan;
+        private System.Windows.Forms.Label lbl_Message;
     }
 }
