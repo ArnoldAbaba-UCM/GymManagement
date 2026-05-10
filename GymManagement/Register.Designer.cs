@@ -34,6 +34,7 @@
             this.btn_Plan = new System.Windows.Forms.Button();
             this.btn_Payment = new System.Windows.Forms.Button();
             this.pl_Personal = new System.Windows.Forms.Panel();
+            this.dtp_DateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.lbl_BirthDate = new System.Windows.Forms.Label();
             this.lbl_PhoneNumber = new System.Windows.Forms.Label();
             this.lbl_Password = new System.Windows.Forms.Label();
@@ -46,11 +47,12 @@
             this.txt_LastName = new System.Windows.Forms.TextBox();
             this.txt_FirstName = new System.Windows.Forms.TextBox();
             this.lbl_SelectPlan = new System.Windows.Forms.Label();
-            this.lbl_Price = new System.Windows.Forms.Label();
-            this.lbl_TotalPrice = new System.Windows.Forms.Label();
             this.lbl_StartDate = new System.Windows.Forms.Label();
             this.pl_Plan = new System.Windows.Forms.Panel();
+            this.cmb_Plan = new System.Windows.Forms.ComboBox();
+            this.dtp_StartDate = new System.Windows.Forms.DateTimePicker();
             this.pl_Payment = new System.Windows.Forms.Panel();
+            this.dtp_PaymentDate = new System.Windows.Forms.DateTimePicker();
             this.lbl_Method = new System.Windows.Forms.Label();
             this.lbl_Amount = new System.Windows.Forms.Label();
             this.cmb_Method = new System.Windows.Forms.ComboBox();
@@ -58,10 +60,6 @@
             this.txt_Amount = new System.Windows.Forms.TextBox();
             this.btn_Next = new System.Windows.Forms.Button();
             this.btn_CompleteRegistration = new System.Windows.Forms.Button();
-            this.dtp_DateOfBirth = new System.Windows.Forms.DateTimePicker();
-            this.dtp_StartDate = new System.Windows.Forms.DateTimePicker();
-            this.dtp_PaymentDate = new System.Windows.Forms.DateTimePicker();
-            this.cmb_Plan = new System.Windows.Forms.ComboBox();
             this.pl_createYourMembership.SuspendLayout();
             this.pl_Personal.SuspendLayout();
             this.pl_Plan.SuspendLayout();
@@ -143,6 +141,14 @@
             this.pl_Personal.Size = new System.Drawing.Size(412, 240);
             this.pl_Personal.TabIndex = 10;
             // 
+            // dtp_DateOfBirth
+            // 
+            this.dtp_DateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_DateOfBirth.Location = new System.Drawing.Point(140, 188);
+            this.dtp_DateOfBirth.Name = "dtp_DateOfBirth";
+            this.dtp_DateOfBirth.Size = new System.Drawing.Size(218, 22);
+            this.dtp_DateOfBirth.TabIndex = 25;
+            // 
             // lbl_BirthDate
             // 
             this.lbl_BirthDate.AutoSize = true;
@@ -213,6 +219,7 @@
             this.txt_Password.PasswordChar = '*';
             this.txt_Password.Size = new System.Drawing.Size(218, 26);
             this.txt_Password.TabIndex = 8;
+            this.txt_Password.UseSystemPasswordChar = true;
             // 
             // txt_Email
             // 
@@ -247,28 +254,10 @@
             this.lbl_SelectPlan.TabIndex = 0;
             this.lbl_SelectPlan.Text = "Select Plan:";
             // 
-            // lbl_Price
-            // 
-            this.lbl_Price.AutoSize = true;
-            this.lbl_Price.Location = new System.Drawing.Point(56, 78);
-            this.lbl_Price.Name = "lbl_Price";
-            this.lbl_Price.Size = new System.Drawing.Size(34, 13);
-            this.lbl_Price.TabIndex = 2;
-            this.lbl_Price.Text = "Price:";
-            // 
-            // lbl_TotalPrice
-            // 
-            this.lbl_TotalPrice.AutoSize = true;
-            this.lbl_TotalPrice.Location = new System.Drawing.Point(131, 81);
-            this.lbl_TotalPrice.Name = "lbl_TotalPrice";
-            this.lbl_TotalPrice.Size = new System.Drawing.Size(14, 13);
-            this.lbl_TotalPrice.TabIndex = 3;
-            this.lbl_TotalPrice.Text = "₱";
-            // 
             // lbl_StartDate
             // 
             this.lbl_StartDate.AutoSize = true;
-            this.lbl_StartDate.Location = new System.Drawing.Point(56, 129);
+            this.lbl_StartDate.Location = new System.Drawing.Point(56, 71);
             this.lbl_StartDate.Name = "lbl_StartDate";
             this.lbl_StartDate.Size = new System.Drawing.Size(58, 13);
             this.lbl_StartDate.TabIndex = 19;
@@ -279,14 +268,33 @@
             this.pl_Plan.Controls.Add(this.cmb_Plan);
             this.pl_Plan.Controls.Add(this.dtp_StartDate);
             this.pl_Plan.Controls.Add(this.lbl_StartDate);
-            this.pl_Plan.Controls.Add(this.lbl_TotalPrice);
-            this.pl_Plan.Controls.Add(this.lbl_Price);
             this.pl_Plan.Controls.Add(this.lbl_SelectPlan);
             this.pl_Plan.Location = new System.Drawing.Point(418, 12);
             this.pl_Plan.Name = "pl_Plan";
             this.pl_Plan.Size = new System.Drawing.Size(412, 240);
             this.pl_Plan.TabIndex = 19;
             this.pl_Plan.Visible = false;
+            // 
+            // cmb_Plan
+            // 
+            this.cmb_Plan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Plan.FormattingEnabled = true;
+            this.cmb_Plan.Items.AddRange(new object[] {
+            "Monthly - ₱800",
+            "Quarterly - ₱1200",
+            "Yearly - ₱1500"});
+            this.cmb_Plan.Location = new System.Drawing.Point(126, 28);
+            this.cmb_Plan.Name = "cmb_Plan";
+            this.cmb_Plan.Size = new System.Drawing.Size(189, 28);
+            this.cmb_Plan.TabIndex = 29;
+            // 
+            // dtp_StartDate
+            // 
+            this.dtp_StartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_StartDate.Location = new System.Drawing.Point(126, 71);
+            this.dtp_StartDate.Name = "dtp_StartDate";
+            this.dtp_StartDate.Size = new System.Drawing.Size(189, 22);
+            this.dtp_StartDate.TabIndex = 26;
             // 
             // pl_Payment
             // 
@@ -302,10 +310,18 @@
             this.pl_Payment.TabIndex = 22;
             this.pl_Payment.Visible = false;
             // 
+            // dtp_PaymentDate
+            // 
+            this.dtp_PaymentDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_PaymentDate.Location = new System.Drawing.Point(147, 82);
+            this.dtp_PaymentDate.Name = "dtp_PaymentDate";
+            this.dtp_PaymentDate.Size = new System.Drawing.Size(189, 22);
+            this.dtp_PaymentDate.TabIndex = 27;
+            // 
             // lbl_Method
             // 
             this.lbl_Method.AutoSize = true;
-            this.lbl_Method.Location = new System.Drawing.Point(49, 118);
+            this.lbl_Method.Location = new System.Drawing.Point(43, 118);
             this.lbl_Method.Name = "lbl_Method";
             this.lbl_Method.Size = new System.Drawing.Size(46, 13);
             this.lbl_Method.TabIndex = 28;
@@ -316,9 +332,9 @@
             this.lbl_Amount.AutoSize = true;
             this.lbl_Amount.Location = new System.Drawing.Point(43, 52);
             this.lbl_Amount.Name = "lbl_Amount";
-            this.lbl_Amount.Size = new System.Drawing.Size(46, 13);
+            this.lbl_Amount.Size = new System.Drawing.Size(98, 13);
             this.lbl_Amount.TabIndex = 27;
-            this.lbl_Amount.Text = "Amount:";
+            this.lbl_Amount.Text = "Amount(to Top up):";
             // 
             // cmb_Method
             // 
@@ -328,7 +344,7 @@
             "Cash",
             "Card",
             "Bank Transfer"});
-            this.cmb_Method.Location = new System.Drawing.Point(126, 110);
+            this.cmb_Method.Location = new System.Drawing.Point(147, 110);
             this.cmb_Method.Name = "cmb_Method";
             this.cmb_Method.Size = new System.Drawing.Size(189, 28);
             this.cmb_Method.TabIndex = 26;
@@ -345,7 +361,7 @@
             // txt_Amount
             // 
             this.txt_Amount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Amount.Location = new System.Drawing.Point(126, 44);
+            this.txt_Amount.Location = new System.Drawing.Point(147, 44);
             this.txt_Amount.Name = "txt_Amount";
             this.txt_Amount.Size = new System.Drawing.Size(189, 26);
             this.txt_Amount.TabIndex = 0;
@@ -371,43 +387,6 @@
             this.btn_CompleteRegistration.Text = "Complete Registration";
             this.btn_CompleteRegistration.UseVisualStyleBackColor = true;
             this.btn_CompleteRegistration.Click += new System.EventHandler(this.btn_CompleteRegistration_Click);
-            // 
-            // dtp_DateOfBirth
-            // 
-            this.dtp_DateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_DateOfBirth.Location = new System.Drawing.Point(140, 188);
-            this.dtp_DateOfBirth.Name = "dtp_DateOfBirth";
-            this.dtp_DateOfBirth.Size = new System.Drawing.Size(218, 22);
-            this.dtp_DateOfBirth.TabIndex = 25;
-            // 
-            // dtp_StartDate
-            // 
-            this.dtp_StartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_StartDate.Location = new System.Drawing.Point(126, 128);
-            this.dtp_StartDate.Name = "dtp_StartDate";
-            this.dtp_StartDate.Size = new System.Drawing.Size(189, 22);
-            this.dtp_StartDate.TabIndex = 26;
-            // 
-            // dtp_PaymentDate
-            // 
-            this.dtp_PaymentDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_PaymentDate.Location = new System.Drawing.Point(126, 82);
-            this.dtp_PaymentDate.Name = "dtp_PaymentDate";
-            this.dtp_PaymentDate.Size = new System.Drawing.Size(189, 22);
-            this.dtp_PaymentDate.TabIndex = 27;
-            // 
-            // cmb_Plan
-            // 
-            this.cmb_Plan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_Plan.FormattingEnabled = true;
-            this.cmb_Plan.Items.AddRange(new object[] {
-            "Monthly - ₱800",
-            "Quarterly - ₱1200",
-            "Yearly - ₱1500"});
-            this.cmb_Plan.Location = new System.Drawing.Point(126, 28);
-            this.cmb_Plan.Name = "cmb_Plan";
-            this.cmb_Plan.Size = new System.Drawing.Size(189, 28);
-            this.cmb_Plan.TabIndex = 29;
             // 
             // Register
             // 
@@ -458,8 +437,6 @@
         private System.Windows.Forms.Label lbl_BirthDate;
         private System.Windows.Forms.Label lbl_PhoneNumber;
         private System.Windows.Forms.Label lbl_SelectPlan;
-        private System.Windows.Forms.Label lbl_Price;
-        private System.Windows.Forms.Label lbl_TotalPrice;
         private System.Windows.Forms.Label lbl_StartDate;
         private System.Windows.Forms.Panel pl_Plan;
         private System.Windows.Forms.Panel pl_Payment;
