@@ -62,6 +62,7 @@
             this.btn_Next = new System.Windows.Forms.Button();
             this.btn_CompleteRegistration = new System.Windows.Forms.Button();
             this.lbl_Message = new System.Windows.Forms.Label();
+            this.btn_Cancel = new System.Windows.Forms.Button();
             this.pl_createYourMembership.SuspendLayout();
             this.pl_Personal.SuspendLayout();
             this.pl_Plan.SuspendLayout();
@@ -437,6 +438,17 @@
             this.lbl_Message.TabIndex = 29;
             this.lbl_Message.Text = "(this will go to your credit balance)";
             // 
+            // btn_Cancel
+            // 
+            this.btn_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Cancel.Location = new System.Drawing.Point(95, 346);
+            this.btn_Cancel.Name = "btn_Cancel";
+            this.btn_Cancel.Size = new System.Drawing.Size(75, 23);
+            this.btn_Cancel.TabIndex = 25;
+            this.btn_Cancel.Text = "Cancel";
+            this.btn_Cancel.UseVisualStyleBackColor = true;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -444,6 +456,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(412, 381);
+            this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.btn_CompleteRegistration);
             this.Controls.Add(this.btn_Next);
             this.Controls.Add(this.pl_Payment);
@@ -503,5 +516,6 @@
         private System.Windows.Forms.DateTimePicker dtp_PaymentDate;
         private System.Windows.Forms.ComboBox cmb_Plan;
         private System.Windows.Forms.Label lbl_Message;
+        private System.Windows.Forms.Button btn_Cancel;
     }
 }

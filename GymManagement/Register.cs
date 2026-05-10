@@ -129,7 +129,7 @@ namespace GymManagement
 
             if (amount < planPrice)
             {
-                MessageBox.Show("The initial top‑up must be at least the plan price ({planPrice:C}).",
+                MessageBox.Show("The initial top‑up must be at least the plan price.",
                                 "Insufficient Top‑up", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
@@ -233,6 +233,13 @@ namespace GymManagement
                 if (con.State == ConnectionState.Open)
                     con.Close();
             }
+        }
+
+        private void btn_Cancel_Click(object sender, EventArgs e)
+        {
+            loginForm loginForm = new loginForm();
+            loginForm.Show();
+            this.Hide();
         }
 
     }
