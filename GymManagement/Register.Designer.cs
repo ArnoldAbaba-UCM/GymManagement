@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             this.pl_createYourMembership = new System.Windows.Forms.Panel();
             this.lbl_CreateYourMembership = new System.Windows.Forms.Label();
             this.btn_Personal = new System.Windows.Forms.Button();
@@ -68,7 +69,7 @@
             // 
             // pl_createYourMembership
             // 
-            this.pl_createYourMembership.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pl_createYourMembership.BackColor = System.Drawing.Color.Orange;
             this.pl_createYourMembership.Controls.Add(this.lbl_CreateYourMembership);
             this.pl_createYourMembership.Location = new System.Drawing.Point(0, 0);
             this.pl_createYourMembership.Name = "pl_createYourMembership";
@@ -89,8 +90,9 @@
             // btn_Personal
             // 
             this.btn_Personal.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_Personal.CausesValidation = false;
             this.btn_Personal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Personal.Location = new System.Drawing.Point(0, 40);
+            this.btn_Personal.Location = new System.Drawing.Point(81, 40);
             this.btn_Personal.Name = "btn_Personal";
             this.btn_Personal.Size = new System.Drawing.Size(74, 37);
             this.btn_Personal.TabIndex = 7;
@@ -101,8 +103,9 @@
             // btn_Plan
             // 
             this.btn_Plan.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_Plan.CausesValidation = false;
             this.btn_Plan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Plan.Location = new System.Drawing.Point(80, 40);
+            this.btn_Plan.Location = new System.Drawing.Point(161, 40);
             this.btn_Plan.Name = "btn_Plan";
             this.btn_Plan.Size = new System.Drawing.Size(74, 37);
             this.btn_Plan.TabIndex = 8;
@@ -113,8 +116,9 @@
             // btn_Payment
             // 
             this.btn_Payment.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_Payment.CausesValidation = false;
             this.btn_Payment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Payment.Location = new System.Drawing.Point(160, 40);
+            this.btn_Payment.Location = new System.Drawing.Point(241, 40);
             this.btn_Payment.Name = "btn_Payment";
             this.btn_Payment.Size = new System.Drawing.Size(74, 37);
             this.btn_Payment.TabIndex = 9;
@@ -124,6 +128,9 @@
             // 
             // pl_Personal
             // 
+            this.pl_Personal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pl_Personal.BackgroundImage")));
+            this.pl_Personal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pl_Personal.CausesValidation = false;
             this.pl_Personal.Controls.Add(this.dtp_DateOfBirth);
             this.pl_Personal.Controls.Add(this.lbl_BirthDate);
             this.pl_Personal.Controls.Add(this.lbl_PhoneNumber);
@@ -136,7 +143,7 @@
             this.pl_Personal.Controls.Add(this.txt_Email);
             this.pl_Personal.Controls.Add(this.txt_LastName);
             this.pl_Personal.Controls.Add(this.txt_FirstName);
-            this.pl_Personal.Location = new System.Drawing.Point(0, 83);
+            this.pl_Personal.Location = new System.Drawing.Point(26, 97);
             this.pl_Personal.Name = "pl_Personal";
             this.pl_Personal.Size = new System.Drawing.Size(412, 240);
             this.pl_Personal.TabIndex = 10;
@@ -152,6 +159,7 @@
             // lbl_BirthDate
             // 
             this.lbl_BirthDate.AutoSize = true;
+            this.lbl_BirthDate.BackColor = System.Drawing.Color.AntiqueWhite;
             this.lbl_BirthDate.Location = new System.Drawing.Point(39, 193);
             this.lbl_BirthDate.Name = "lbl_BirthDate";
             this.lbl_BirthDate.Size = new System.Drawing.Size(69, 13);
@@ -161,6 +169,7 @@
             // lbl_PhoneNumber
             // 
             this.lbl_PhoneNumber.AutoSize = true;
+            this.lbl_PhoneNumber.BackColor = System.Drawing.Color.AntiqueWhite;
             this.lbl_PhoneNumber.Location = new System.Drawing.Point(39, 161);
             this.lbl_PhoneNumber.Name = "lbl_PhoneNumber";
             this.lbl_PhoneNumber.Size = new System.Drawing.Size(81, 13);
@@ -170,6 +179,7 @@
             // lbl_Password
             // 
             this.lbl_Password.AutoSize = true;
+            this.lbl_Password.BackColor = System.Drawing.Color.AntiqueWhite;
             this.lbl_Password.Location = new System.Drawing.Point(39, 129);
             this.lbl_Password.Name = "lbl_Password";
             this.lbl_Password.Size = new System.Drawing.Size(56, 13);
@@ -179,6 +189,7 @@
             // lbl_Email
             // 
             this.lbl_Email.AutoSize = true;
+            this.lbl_Email.BackColor = System.Drawing.Color.AntiqueWhite;
             this.lbl_Email.Location = new System.Drawing.Point(39, 97);
             this.lbl_Email.Name = "lbl_Email";
             this.lbl_Email.Size = new System.Drawing.Size(35, 13);
@@ -188,6 +199,7 @@
             // lbl_LastName
             // 
             this.lbl_LastName.AutoSize = true;
+            this.lbl_LastName.BackColor = System.Drawing.Color.AntiqueWhite;
             this.lbl_LastName.Location = new System.Drawing.Point(37, 65);
             this.lbl_LastName.Name = "lbl_LastName";
             this.lbl_LastName.Size = new System.Drawing.Size(61, 13);
@@ -197,6 +209,7 @@
             // lbl_FirstName
             // 
             this.lbl_FirstName.AutoSize = true;
+            this.lbl_FirstName.BackColor = System.Drawing.Color.AntiqueWhite;
             this.lbl_FirstName.Location = new System.Drawing.Point(37, 33);
             this.lbl_FirstName.Name = "lbl_FirstName";
             this.lbl_FirstName.Size = new System.Drawing.Size(60, 13);
@@ -205,6 +218,8 @@
             // 
             // txt_PhoneNumber
             // 
+            this.txt_PhoneNumber.BackColor = System.Drawing.SystemColors.Info;
+            this.txt_PhoneNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_PhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_PhoneNumber.Location = new System.Drawing.Point(140, 153);
             this.txt_PhoneNumber.Name = "txt_PhoneNumber";
@@ -213,6 +228,8 @@
             // 
             // txt_Password
             // 
+            this.txt_Password.BackColor = System.Drawing.SystemColors.Info;
+            this.txt_Password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Password.Location = new System.Drawing.Point(140, 121);
             this.txt_Password.Name = "txt_Password";
@@ -223,6 +240,8 @@
             // 
             // txt_Email
             // 
+            this.txt_Email.BackColor = System.Drawing.SystemColors.Info;
+            this.txt_Email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Email.Location = new System.Drawing.Point(140, 89);
             this.txt_Email.Name = "txt_Email";
@@ -231,6 +250,8 @@
             // 
             // txt_LastName
             // 
+            this.txt_LastName.BackColor = System.Drawing.SystemColors.Info;
+            this.txt_LastName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_LastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_LastName.Location = new System.Drawing.Point(140, 57);
             this.txt_LastName.Name = "txt_LastName";
@@ -239,6 +260,8 @@
             // 
             // txt_FirstName
             // 
+            this.txt_FirstName.BackColor = System.Drawing.SystemColors.Info;
+            this.txt_FirstName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_FirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_FirstName.Location = new System.Drawing.Point(140, 25);
             this.txt_FirstName.Name = "txt_FirstName";
@@ -248,6 +271,7 @@
             // lbl_SelectPlan
             // 
             this.lbl_SelectPlan.AutoSize = true;
+            this.lbl_SelectPlan.BackColor = System.Drawing.Color.AntiqueWhite;
             this.lbl_SelectPlan.Location = new System.Drawing.Point(56, 38);
             this.lbl_SelectPlan.Name = "lbl_SelectPlan";
             this.lbl_SelectPlan.Size = new System.Drawing.Size(64, 13);
@@ -257,6 +281,7 @@
             // lbl_StartDate
             // 
             this.lbl_StartDate.AutoSize = true;
+            this.lbl_StartDate.BackColor = System.Drawing.Color.AntiqueWhite;
             this.lbl_StartDate.Location = new System.Drawing.Point(56, 71);
             this.lbl_StartDate.Name = "lbl_StartDate";
             this.lbl_StartDate.Size = new System.Drawing.Size(58, 13);
@@ -265,11 +290,13 @@
             // 
             // pl_Plan
             // 
+            this.pl_Plan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pl_Plan.BackgroundImage")));
+            this.pl_Plan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pl_Plan.Controls.Add(this.cmb_Plan);
             this.pl_Plan.Controls.Add(this.dtp_StartDate);
             this.pl_Plan.Controls.Add(this.lbl_StartDate);
             this.pl_Plan.Controls.Add(this.lbl_SelectPlan);
-            this.pl_Plan.Location = new System.Drawing.Point(418, 12);
+            this.pl_Plan.Location = new System.Drawing.Point(477, 22);
             this.pl_Plan.Name = "pl_Plan";
             this.pl_Plan.Size = new System.Drawing.Size(412, 240);
             this.pl_Plan.TabIndex = 19;
@@ -277,6 +304,7 @@
             // 
             // cmb_Plan
             // 
+            this.cmb_Plan.BackColor = System.Drawing.SystemColors.Info;
             this.cmb_Plan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_Plan.FormattingEnabled = true;
             this.cmb_Plan.Items.AddRange(new object[] {
@@ -298,13 +326,15 @@
             // 
             // pl_Payment
             // 
+            this.pl_Payment.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pl_Payment.BackgroundImage")));
+            this.pl_Payment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pl_Payment.Controls.Add(this.dtp_PaymentDate);
             this.pl_Payment.Controls.Add(this.lbl_Method);
             this.pl_Payment.Controls.Add(this.lbl_Amount);
             this.pl_Payment.Controls.Add(this.cmb_Method);
             this.pl_Payment.Controls.Add(this.lbl_PaymentDate);
             this.pl_Payment.Controls.Add(this.txt_Amount);
-            this.pl_Payment.Location = new System.Drawing.Point(545, 225);
+            this.pl_Payment.Location = new System.Drawing.Point(477, 267);
             this.pl_Payment.Name = "pl_Payment";
             this.pl_Payment.Size = new System.Drawing.Size(412, 243);
             this.pl_Payment.TabIndex = 22;
@@ -321,6 +351,7 @@
             // lbl_Method
             // 
             this.lbl_Method.AutoSize = true;
+            this.lbl_Method.BackColor = System.Drawing.Color.AntiqueWhite;
             this.lbl_Method.Location = new System.Drawing.Point(43, 118);
             this.lbl_Method.Name = "lbl_Method";
             this.lbl_Method.Size = new System.Drawing.Size(46, 13);
@@ -330,6 +361,7 @@
             // lbl_Amount
             // 
             this.lbl_Amount.AutoSize = true;
+            this.lbl_Amount.BackColor = System.Drawing.Color.AntiqueWhite;
             this.lbl_Amount.Location = new System.Drawing.Point(43, 52);
             this.lbl_Amount.Name = "lbl_Amount";
             this.lbl_Amount.Size = new System.Drawing.Size(98, 13);
@@ -338,6 +370,7 @@
             // 
             // cmb_Method
             // 
+            this.cmb_Method.BackColor = System.Drawing.SystemColors.Info;
             this.cmb_Method.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_Method.FormattingEnabled = true;
             this.cmb_Method.Items.AddRange(new object[] {
@@ -352,6 +385,7 @@
             // lbl_PaymentDate
             // 
             this.lbl_PaymentDate.AutoSize = true;
+            this.lbl_PaymentDate.BackColor = System.Drawing.Color.AntiqueWhite;
             this.lbl_PaymentDate.Location = new System.Drawing.Point(43, 84);
             this.lbl_PaymentDate.Name = "lbl_PaymentDate";
             this.lbl_PaymentDate.Size = new System.Drawing.Size(77, 13);
@@ -360,6 +394,8 @@
             // 
             // txt_Amount
             // 
+            this.txt_Amount.BackColor = System.Drawing.SystemColors.Info;
+            this.txt_Amount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Amount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Amount.Location = new System.Drawing.Point(147, 44);
             this.txt_Amount.Name = "txt_Amount";
@@ -369,7 +405,7 @@
             // btn_Next
             // 
             this.btn_Next.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Next.Location = new System.Drawing.Point(160, 343);
+            this.btn_Next.Location = new System.Drawing.Point(214, 346);
             this.btn_Next.Name = "btn_Next";
             this.btn_Next.Size = new System.Drawing.Size(75, 23);
             this.btn_Next.TabIndex = 23;
@@ -380,7 +416,7 @@
             // btn_CompleteRegistration
             // 
             this.btn_CompleteRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_CompleteRegistration.Location = new System.Drawing.Point(240, 343);
+            this.btn_CompleteRegistration.Location = new System.Drawing.Point(295, 346);
             this.btn_CompleteRegistration.Name = "btn_CompleteRegistration";
             this.btn_CompleteRegistration.Size = new System.Drawing.Size(143, 23);
             this.btn_CompleteRegistration.TabIndex = 24;
@@ -392,6 +428,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(989, 522);
             this.Controls.Add(this.btn_CompleteRegistration);
             this.Controls.Add(this.btn_Next);

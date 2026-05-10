@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loginForm));
             this.pl_MemberLogin = new System.Windows.Forms.Panel();
             this.lbl_memberLogin = new System.Windows.Forms.Label();
             this.txt_UsernameEmail = new System.Windows.Forms.TextBox();
@@ -43,18 +44,19 @@
             // 
             // pl_MemberLogin
             // 
-            this.pl_MemberLogin.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pl_MemberLogin.BackColor = System.Drawing.Color.NavajoWhite;
+            this.pl_MemberLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pl_MemberLogin.Controls.Add(this.lbl_memberLogin);
-            this.pl_MemberLogin.Location = new System.Drawing.Point(0, 0);
+            this.pl_MemberLogin.Location = new System.Drawing.Point(102, 12);
             this.pl_MemberLogin.Name = "pl_MemberLogin";
-            this.pl_MemberLogin.Size = new System.Drawing.Size(337, 34);
+            this.pl_MemberLogin.Size = new System.Drawing.Size(127, 34);
             this.pl_MemberLogin.TabIndex = 0;
             // 
             // lbl_memberLogin
             // 
             this.lbl_memberLogin.AutoSize = true;
             this.lbl_memberLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_memberLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl_memberLogin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbl_memberLogin.Location = new System.Drawing.Point(12, 9);
             this.lbl_memberLogin.Name = "lbl_memberLogin";
             this.lbl_memberLogin.Size = new System.Drawing.Size(106, 16);
@@ -63,6 +65,8 @@
             // 
             // txt_UsernameEmail
             // 
+            this.txt_UsernameEmail.BackColor = System.Drawing.Color.Wheat;
+            this.txt_UsernameEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_UsernameEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_UsernameEmail.Location = new System.Drawing.Point(53, 79);
             this.txt_UsernameEmail.Name = "txt_UsernameEmail";
@@ -72,6 +76,7 @@
             // lbl_UsernameEmail
             // 
             this.lbl_UsernameEmail.AutoSize = true;
+            this.lbl_UsernameEmail.BackColor = System.Drawing.Color.LightSalmon;
             this.lbl_UsernameEmail.Location = new System.Drawing.Point(50, 63);
             this.lbl_UsernameEmail.Name = "lbl_UsernameEmail";
             this.lbl_UsernameEmail.Size = new System.Drawing.Size(32, 13);
@@ -81,6 +86,7 @@
             // lbl_Password
             // 
             this.lbl_Password.AutoSize = true;
+            this.lbl_Password.BackColor = System.Drawing.Color.LightSalmon;
             this.lbl_Password.Location = new System.Drawing.Point(50, 126);
             this.lbl_Password.Name = "lbl_Password";
             this.lbl_Password.Size = new System.Drawing.Size(53, 13);
@@ -89,6 +95,8 @@
             // 
             // txt_Password
             // 
+            this.txt_Password.BackColor = System.Drawing.Color.Wheat;
+            this.txt_Password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Password.Location = new System.Drawing.Point(53, 142);
             this.txt_Password.Name = "txt_Password";
@@ -98,7 +106,7 @@
             // 
             // btn_login
             // 
-            this.btn_login.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_login.BackColor = System.Drawing.Color.Tomato;
             this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_login.Location = new System.Drawing.Point(225, 184);
             this.btn_login.Name = "btn_login";
@@ -122,6 +130,7 @@
             // lbl_NewMember
             // 
             this.lbl_NewMember.AutoSize = true;
+            this.lbl_NewMember.BackColor = System.Drawing.Color.LightSalmon;
             this.lbl_NewMember.Location = new System.Drawing.Point(89, 243);
             this.lbl_NewMember.Name = "lbl_NewMember";
             this.lbl_NewMember.Size = new System.Drawing.Size(75, 13);
@@ -131,7 +140,8 @@
             // lbl_CreateAccount
             // 
             this.lbl_CreateAccount.AutoSize = true;
-            this.lbl_CreateAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lbl_CreateAccount.BackColor = System.Drawing.Color.LightSalmon;
+            this.lbl_CreateAccount.ForeColor = System.Drawing.Color.OrangeRed;
             this.lbl_CreateAccount.Location = new System.Drawing.Point(170, 243);
             this.lbl_CreateAccount.Name = "lbl_CreateAccount";
             this.lbl_CreateAccount.Size = new System.Drawing.Size(95, 13);
@@ -143,7 +153,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(335, 269);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(572, 294);
             this.Controls.Add(this.lbl_CreateAccount);
             this.Controls.Add(this.lbl_NewMember);
             this.Controls.Add(this.btn_Cancel);

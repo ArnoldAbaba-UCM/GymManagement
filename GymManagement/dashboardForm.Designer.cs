@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dashboardForm));
             this.pl_Welcome = new System.Windows.Forms.Panel();
             this.btn_Logout = new System.Windows.Forms.Button();
             this.lbl_WelcomeName = new System.Windows.Forms.Label();
@@ -48,7 +49,8 @@
             // 
             // pl_Welcome
             // 
-            this.pl_Welcome.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pl_Welcome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(29)))));
+            this.pl_Welcome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pl_Welcome.Controls.Add(this.btn_Logout);
             this.pl_Welcome.Controls.Add(this.lbl_WelcomeName);
             this.pl_Welcome.Location = new System.Drawing.Point(-2, 0);
@@ -58,6 +60,7 @@
             // 
             // btn_Logout
             // 
+            this.btn_Logout.BackColor = System.Drawing.Color.Chocolate;
             this.btn_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Logout.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_Logout.Location = new System.Drawing.Point(692, 9);
@@ -66,13 +69,13 @@
             this.btn_Logout.TabIndex = 1;
             this.btn_Logout.TabStop = false;
             this.btn_Logout.Text = "Log out";
-            this.btn_Logout.UseVisualStyleBackColor = true;
+            this.btn_Logout.UseVisualStyleBackColor = false;
             this.btn_Logout.Click += new System.EventHandler(this.btn_Logout_Click);
             // 
             // lbl_WelcomeName
             // 
             this.lbl_WelcomeName.AutoSize = true;
-            this.lbl_WelcomeName.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_WelcomeName.ForeColor = System.Drawing.Color.White;
             this.lbl_WelcomeName.Location = new System.Drawing.Point(14, 14);
             this.lbl_WelcomeName.Name = "lbl_WelcomeName";
             this.lbl_WelcomeName.Size = new System.Drawing.Size(89, 13);
@@ -81,7 +84,8 @@
             // 
             // pl_Status
             // 
-            this.pl_Status.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pl_Status.BackColor = System.Drawing.Color.DarkSalmon;
+            this.pl_Status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pl_Status.Controls.Add(this.lbl_Status);
             this.pl_Status.Controls.Add(this.lbl_Credit);
             this.pl_Status.Controls.Add(this.lbl_JoinedDate);
@@ -94,6 +98,7 @@
             // lbl_Status
             // 
             this.lbl_Status.AutoSize = true;
+            this.lbl_Status.ForeColor = System.Drawing.Color.White;
             this.lbl_Status.Location = new System.Drawing.Point(559, 67);
             this.lbl_Status.Name = "lbl_Status";
             this.lbl_Status.Size = new System.Drawing.Size(40, 13);
@@ -103,6 +108,7 @@
             // lbl_Credit
             // 
             this.lbl_Credit.AutoSize = true;
+            this.lbl_Credit.ForeColor = System.Drawing.Color.White;
             this.lbl_Credit.Location = new System.Drawing.Point(559, 26);
             this.lbl_Credit.Name = "lbl_Credit";
             this.lbl_Credit.Size = new System.Drawing.Size(37, 13);
@@ -112,6 +118,7 @@
             // lbl_JoinedDate
             // 
             this.lbl_JoinedDate.AutoSize = true;
+            this.lbl_JoinedDate.ForeColor = System.Drawing.Color.White;
             this.lbl_JoinedDate.Location = new System.Drawing.Point(30, 67);
             this.lbl_JoinedDate.Name = "lbl_JoinedDate";
             this.lbl_JoinedDate.Size = new System.Drawing.Size(41, 13);
@@ -121,6 +128,7 @@
             // lbl_Member
             // 
             this.lbl_Member.AutoSize = true;
+            this.lbl_Member.ForeColor = System.Drawing.Color.White;
             this.lbl_Member.Location = new System.Drawing.Point(30, 21);
             this.lbl_Member.Name = "lbl_Member";
             this.lbl_Member.Size = new System.Drawing.Size(51, 13);
@@ -129,38 +137,46 @@
             // 
             // btn_RenewEditPlan
             // 
+            this.btn_RenewEditPlan.BackColor = System.Drawing.Color.Chocolate;
             this.btn_RenewEditPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_RenewEditPlan.ForeColor = System.Drawing.Color.White;
             this.btn_RenewEditPlan.Location = new System.Drawing.Point(101, 221);
             this.btn_RenewEditPlan.Name = "btn_RenewEditPlan";
             this.btn_RenewEditPlan.Size = new System.Drawing.Size(144, 41);
             this.btn_RenewEditPlan.TabIndex = 2;
             this.btn_RenewEditPlan.Text = "Renew / Change Plan";
-            this.btn_RenewEditPlan.UseVisualStyleBackColor = true;
+            this.btn_RenewEditPlan.UseVisualStyleBackColor = false;
             this.btn_RenewEditPlan.Click += new System.EventHandler(this.btn_RenewEditPlan_Click);
             // 
             // btn_ViewTransactions
             // 
+            this.btn_ViewTransactions.BackColor = System.Drawing.Color.Chocolate;
             this.btn_ViewTransactions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ViewTransactions.ForeColor = System.Drawing.Color.White;
             this.btn_ViewTransactions.Location = new System.Drawing.Point(251, 221);
             this.btn_ViewTransactions.Name = "btn_ViewTransactions";
             this.btn_ViewTransactions.Size = new System.Drawing.Size(144, 41);
             this.btn_ViewTransactions.TabIndex = 3;
             this.btn_ViewTransactions.Text = "View Transactions";
-            this.btn_ViewTransactions.UseVisualStyleBackColor = true;
+            this.btn_ViewTransactions.UseVisualStyleBackColor = false;
             // 
             // btn_EditProfile
             // 
+            this.btn_EditProfile.BackColor = System.Drawing.Color.Chocolate;
             this.btn_EditProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_EditProfile.ForeColor = System.Drawing.Color.White;
             this.btn_EditProfile.Location = new System.Drawing.Point(401, 221);
             this.btn_EditProfile.Name = "btn_EditProfile";
             this.btn_EditProfile.Size = new System.Drawing.Size(104, 41);
             this.btn_EditProfile.TabIndex = 4;
             this.btn_EditProfile.Text = "Edit Profile";
-            this.btn_EditProfile.UseVisualStyleBackColor = true;
+            this.btn_EditProfile.UseVisualStyleBackColor = false;
             // 
             // lbl_RecentPayments
             // 
             this.lbl_RecentPayments.AutoSize = true;
+            this.lbl_RecentPayments.BackColor = System.Drawing.Color.SaddleBrown;
+            this.lbl_RecentPayments.ForeColor = System.Drawing.Color.White;
             this.lbl_RecentPayments.Location = new System.Drawing.Point(62, 286);
             this.lbl_RecentPayments.Name = "lbl_RecentPayments";
             this.lbl_RecentPayments.Size = new System.Drawing.Size(86, 13);
@@ -169,6 +185,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.DarkSalmon;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(61, 333);
             this.dataGridView1.Name = "dataGridView1";
@@ -179,6 +196,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Chocolate;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(777, 426);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lbl_RecentPayments);
