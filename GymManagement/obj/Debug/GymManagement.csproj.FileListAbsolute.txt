@@ -9,3 +9,14 @@ D:\jm\Visual Studio\Projects\GymManagement\GymManagement\obj\Debug\GymManagement
 D:\jm\Visual Studio\Projects\GymManagement\GymManagement\obj\Debug\GymManagement.Register.resources
 D:\jm\Visual Studio\Projects\GymManagement\GymManagement\obj\Debug\GymManagement.loginForm.resources
 D:\jm\Visual Studio\Projects\GymManagement\GymManagement\obj\Debug\GymManagement.dashboardForm.resources
+C:\Users\sensu\OneDrive\Documents\Visual Studio 2012\Projects\GymManagement\GymManagement\bin\Debug\GymManagement.exe.config
+C:\Users\sensu\OneDrive\Documents\Visual Studio 2012\Projects\GymManagement\GymManagement\obj\Debug\GymManagement.exe
+C:\Users\sensu\OneDrive\Documents\Visual Studio 2012\Projects\GymManagement\GymManagement\obj\Debug\GymManagement.pdb
+C:\Users\sensu\OneDrive\Documents\Visual Studio 2012\Projects\GymManagement\GymManagement\bin\Debug\GymManagement.exe
+C:\Users\sensu\OneDrive\Documents\Visual Studio 2012\Projects\GymManagement\GymManagement\bin\Debug\GymManagement.pdb
+C:\Users\sensu\OneDrive\Documents\Visual Studio 2012\Projects\GymManagement\GymManagement\obj\Debug\GymManagement.csprojResolveAssemblyReference.cache
+C:\Users\sensu\OneDrive\Documents\Visual Studio 2012\Projects\GymManagement\GymManagement\obj\Debug\GymManagement.dashboardForm.resources
+C:\Users\sensu\OneDrive\Documents\Visual Studio 2012\Projects\GymManagement\GymManagement\obj\Debug\GymManagement.loginForm.resources
+C:\Users\sensu\OneDrive\Documents\Visual Studio 2012\Projects\GymManagement\GymManagement\obj\Debug\GymManagement.Properties.Resources.resources
+C:\Users\sensu\OneDrive\Documents\Visual Studio 2012\Projects\GymManagement\GymManagement\obj\Debug\GymManagement.Register.resources
+C:\Users\sensu\OneDrive\Documents\Visual Studio 2012\Projects\GymManagement\GymManagement\obj\Debug\GymManagement.csproj.GenerateResource.Cache
