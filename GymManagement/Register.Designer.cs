@@ -144,7 +144,7 @@
             this.pl_Personal.Controls.Add(this.txt_Email);
             this.pl_Personal.Controls.Add(this.txt_LastName);
             this.pl_Personal.Controls.Add(this.txt_FirstName);
-            this.pl_Personal.Location = new System.Drawing.Point(26, 97);
+            this.pl_Personal.Location = new System.Drawing.Point(0, 92);
             this.pl_Personal.Name = "pl_Personal";
             this.pl_Personal.Size = new System.Drawing.Size(412, 240);
             this.pl_Personal.TabIndex = 10;
@@ -297,7 +297,7 @@
             this.pl_Plan.Controls.Add(this.dtp_StartDate);
             this.pl_Plan.Controls.Add(this.lbl_StartDate);
             this.pl_Plan.Controls.Add(this.lbl_SelectPlan);
-            this.pl_Plan.Location = new System.Drawing.Point(477, 22);
+            this.pl_Plan.Location = new System.Drawing.Point(0, 89);
             this.pl_Plan.Name = "pl_Plan";
             this.pl_Plan.Size = new System.Drawing.Size(412, 240);
             this.pl_Plan.TabIndex = 19;
@@ -336,7 +336,7 @@
             this.pl_Payment.Controls.Add(this.cmb_Method);
             this.pl_Payment.Controls.Add(this.lbl_PaymentDate);
             this.pl_Payment.Controls.Add(this.txt_Amount);
-            this.pl_Payment.Location = new System.Drawing.Point(477, 267);
+            this.pl_Payment.Location = new System.Drawing.Point(0, 83);
             this.pl_Payment.Name = "pl_Payment";
             this.pl_Payment.Size = new System.Drawing.Size(412, 243);
             this.pl_Payment.TabIndex = 22;
@@ -407,7 +407,7 @@
             // btn_Next
             // 
             this.btn_Next.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Next.Location = new System.Drawing.Point(214, 346);
+            this.btn_Next.Location = new System.Drawing.Point(176, 346);
             this.btn_Next.Name = "btn_Next";
             this.btn_Next.Size = new System.Drawing.Size(75, 23);
             this.btn_Next.TabIndex = 23;
@@ -418,7 +418,7 @@
             // btn_CompleteRegistration
             // 
             this.btn_CompleteRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_CompleteRegistration.Location = new System.Drawing.Point(295, 346);
+            this.btn_CompleteRegistration.Location = new System.Drawing.Point(269, 346);
             this.btn_CompleteRegistration.Name = "btn_CompleteRegistration";
             this.btn_CompleteRegistration.Size = new System.Drawing.Size(143, 23);
             this.btn_CompleteRegistration.TabIndex = 24;
@@ -443,7 +443,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(989, 522);
+            this.ClientSize = new System.Drawing.Size(412, 381);
             this.Controls.Add(this.btn_CompleteRegistration);
             this.Controls.Add(this.btn_Next);
             this.Controls.Add(this.pl_Payment);
