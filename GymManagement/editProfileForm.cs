@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.IO;
 
 namespace GymManagement
 {
@@ -20,6 +21,9 @@ namespace GymManagement
         public string LoggedInEmail { get; set; }
 
         public bool AccountDeleted { get; private set; }
+
+        private byte[] selectedImageBytes = null;   // newly chosen image
+        private byte[] originalImageBytes = null;   // existing image from DB
 
         public editProfileForm()
         {
@@ -37,9 +41,9 @@ namespace GymManagement
                 return;
             }
 
-            string sql = @"SELECT FirstName, LastName, Email, Phone
-                           FROM Members
-                           WHERE Email = @Email AND Active = True";
+            string sql = @"SELECT FirstName, LastName, Email, Phone, ProfilePic
+                   FROM Members
+                   WHERE Email = @Email AND Active = True";
 
             try
             {
@@ -57,8 +61,23 @@ namespace GymManagement
                         {
                             txt_FirstName.Text = reader["FirstName"].ToString();
                             txt_LastName.Text = reader["LastName"].ToString();
-                            txt_Email.Text = reader["Email"].ToString();       // locked, just for display
+                            txt_Email.Text = reader["Email"].ToString();
                             txt_PhoneNumber.Text = reader["Phone"].ToString();
+
+                            // --- Load profile picture ---
+                            if (reader["ProfilePic"] != DBNull.Value)
+                            {
+                                originalImageBytes = (byte[])reader["ProfilePic"];
+                                using (MemoryStream ms = new MemoryStream(originalImageBytes))
+                                {
+                                    pb_ProfilePic.Image = Image.FromStream(ms);
+                                }
+                            }
+                            else
+                            {
+                                originalImageBytes = null;
+                                pb_ProfilePic.Image = null;   // or a default placeholder
+                            }
                         }
                         else
                         {
@@ -84,9 +103,9 @@ namespace GymManagement
             string newFirst = txt_FirstName.Text.Trim();
             string newLast = txt_LastName.Text.Trim();
             string newPhone = txt_PhoneNumber.Text.Trim();
-            string newPass = txt_NewPassword.Text;   // may be empty
+            string newPass = txt_NewPassword.Text;
 
-            // Validations (same as before)
+            // Validations
             if (string.IsNullOrEmpty(newFirst) || string.IsNullOrEmpty(newLast) || string.IsNullOrEmpty(newPhone))
             {
                 MessageBox.Show("First name, last name, and phone cannot be empty.");
@@ -103,34 +122,46 @@ namespace GymManagement
                 return;
             }
 
-            // Build the SQL and parameters with CORRECT ORDER
+            // Determine which image bytes to save
+            byte[] finalImageBytes = selectedImageBytes ?? originalImageBytes;
+
+            // Build SQL and parameters (correct order!)
             string sql;
             OleDbCommand cmd;
 
             if (!string.IsNullOrEmpty(newPass))
             {
                 sql = @"UPDATE Members 
-                SET FirstName = @First, LastName = @Last, Phone = @Phone, [Password] = @Pass
+                SET FirstName = @First, LastName = @Last, Phone = @Phone, [Password] = @Pass, ProfilePic = @ProfilePic
                 WHERE Email = @Email";
                 cmd = new OleDbCommand(sql, con);
-                // Parameters MUST be added in the order they appear in the SQL:
-                // @First, @Last, @Phone, @Pass, @Email
+                // Order: @First, @Last, @Phone, @Pass, @ProfilePic, @Email
                 cmd.Parameters.Add("@First", OleDbType.VarWChar).Value = newFirst;
                 cmd.Parameters.Add("@Last", OleDbType.VarWChar).Value = newLast;
                 cmd.Parameters.Add("@Phone", OleDbType.VarWChar).Value = newPhone;
                 cmd.Parameters.Add("@Pass", OleDbType.VarWChar).Value = newPass;
+                // Profile pic
+                if (finalImageBytes != null)
+                    cmd.Parameters.Add("@ProfilePic", OleDbType.LongVarBinary).Value = finalImageBytes;
+                else
+                    cmd.Parameters.Add("@ProfilePic", OleDbType.LongVarBinary).Value = DBNull.Value;
                 cmd.Parameters.Add("@Email", OleDbType.VarWChar).Value = LoggedInEmail;
             }
             else
             {
                 sql = @"UPDATE Members 
-                SET FirstName = @First, LastName = @Last, Phone = @Phone
+                SET FirstName = @First, LastName = @Last, Phone = @Phone, ProfilePic = @ProfilePic
                 WHERE Email = @Email";
                 cmd = new OleDbCommand(sql, con);
-                // Order: @First, @Last, @Phone, @Email
+                // Order: @First, @Last, @Phone, @ProfilePic, @Email
                 cmd.Parameters.Add("@First", OleDbType.VarWChar).Value = newFirst;
                 cmd.Parameters.Add("@Last", OleDbType.VarWChar).Value = newLast;
                 cmd.Parameters.Add("@Phone", OleDbType.VarWChar).Value = newPhone;
+                // Profile pic
+                if (finalImageBytes != null)
+                    cmd.Parameters.Add("@ProfilePic", OleDbType.LongVarBinary).Value = finalImageBytes;
+                else
+                    cmd.Parameters.Add("@ProfilePic", OleDbType.LongVarBinary).Value = DBNull.Value;
                 cmd.Parameters.Add("@Email", OleDbType.VarWChar).Value = LoggedInEmail;
             }
 
@@ -145,7 +176,6 @@ namespace GymManagement
                 if (rows > 0)
                 {
                     MessageBox.Show("Profile updated successfully!", "Success");
-                    // Optionally, tell the dashboard to reload its data before closing
                     this.Close();
                 }
                 else
@@ -166,7 +196,7 @@ namespace GymManagement
 
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
         private void lbl_Delete_Click(object sender, EventArgs e)
@@ -214,6 +244,25 @@ namespace GymManagement
             {
                 if (con.State == ConnectionState.Open)
                     con.Close();
+            }
+        }
+
+        private void btn_Upload_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog dlg = new OpenFileDialog())
+            {
+                dlg.Filter = "Image Files (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png|All files (*.*)|*.*";
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    // Display the chosen image
+                    pb_ProfilePic.Image = Image.FromFile(dlg.FileName);
+                    // Convert to JPEG bytes and store
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        pb_ProfilePic.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                        selectedImageBytes = ms.ToArray();
+                    }
+                }
             }
         }
     }

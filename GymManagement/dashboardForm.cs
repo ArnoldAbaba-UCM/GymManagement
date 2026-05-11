@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.IO;
 
 namespace GymManagement
 {
@@ -20,6 +21,8 @@ namespace GymManagement
 
         public string LoggedInEmail { get; set; }
         private string memberFullName = "";
+
+        private DataTable transactionsData = null;
 
         public dashboardForm()
         {
@@ -57,9 +60,9 @@ namespace GymManagement
                 return;
             }
 
-            string sql = @"SELECT FirstName, LastName, Plan, Credit, StartDate, Phone
-                   FROM Members
-                   WHERE Email = @Email AND Active = True";
+            string sql = @"SELECT FirstName, LastName, Plan, Credit, StartDate, Phone, ProfilePic
+               FROM Members
+               WHERE Email = @Email AND Active = True";
 
             try
             {
@@ -92,6 +95,20 @@ namespace GymManagement
                             lbl_Credit.Text = "Credit: " + credit;
                             lbl_JoinedDate.Text = "Joined: " + startDate;
                             lbl_Status.Text = "Status: Active";
+
+                            // Load profile picture
+                            if (reader["ProfilePic"] != DBNull.Value)
+                            {
+                                byte[] imageBytes = (byte[])reader["ProfilePic"];
+                                using (MemoryStream ms = new MemoryStream(imageBytes))
+                                {
+                                    pb_ProfilePic.Image = Image.FromStream(ms);
+                                }
+                            }
+                            else
+                            {
+                                pb_ProfilePic.Image = null;   // or set a default placeholder
+                            }
 
                         }
                         else
@@ -160,13 +177,12 @@ namespace GymManagement
                         con.Close();
                     con.Open();
 
-                    DataTable dt = new DataTable();
-                    dt.Load(cmd.ExecuteReader());
+                    transactionsData = new DataTable();               // store in class field
+                    transactionsData.Load(cmd.ExecuteReader());
                     con.Close();
 
-                    dgv_RecentTransaction.DataSource = dt;
+                    dgv_RecentTransaction.DataSource = transactionsData;
                     dgv_RecentTransaction.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                    //para chuy peso sign
                     dgv_RecentTransaction.Columns["Amount"].DefaultCellStyle.Format = "₱#,##0.00";
                     dgv_RecentTransaction.AutoResizeColumns();
                 }
@@ -194,6 +210,35 @@ namespace GymManagement
 
             dashboardForm_LoadData();
             this.Show();
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            string searchText = txt_SearchBar.Text.Trim();
+
+            if (transactionsData == null)
+                return;
+
+            if (string.IsNullOrEmpty(searchText))
+            {
+                // Clear any filter – show all rows
+                transactionsData.DefaultView.RowFilter = "";
+            }
+            else
+            {
+                // Escape single quotes to avoid filter syntax errors
+                string escaped = searchText.Replace("'", "''");
+
+                // Search across all four columns – Amount, Description, PaymentDate, PaymentMethod
+                string filter = string.Format(
+                    "CONVERT(Amount, 'System.String') LIKE '%{0}%' " +
+                    "OR Description LIKE '%{0}%' " +
+                    "OR CONVERT(PaymentDate, 'System.String') LIKE '%{0}%' " +
+                    "OR PaymentMethod LIKE '%{0}%'",
+                    escaped);
+
+                transactionsData.DefaultView.RowFilter = filter;
+            }
         }
     }
 }

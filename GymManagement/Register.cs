@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Configuration;
 using System.Data;
 using System.Data.OleDb;
+using System.IO;
 
 // Cyrus
 namespace GymManagement
@@ -19,6 +20,8 @@ namespace GymManagement
         OleDbConnection con = new OleDbConnection(
             @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source="
             + Application.StartupPath + @"\GymDB.accdb");
+
+        private byte[] selectedImageBytes = null;
 
         public Register()
         {
@@ -137,7 +140,8 @@ namespace GymManagement
             decimal remainingCredit = amount - planPrice;
             InsertMember(
                 firstName, lastName, email, password,
-                phone, dob, planText, startDate, remainingCredit.ToString()
+                phone, dob, planText, startDate, remainingCredit.ToString(),
+                selectedImageBytes    //pass the image bytes (null if none)
             );
 
             //Transactions part
@@ -190,14 +194,15 @@ namespace GymManagement
         }
 
         public void InsertMember(string firstName, string lastName, string email, string password,
-                          string phone, DateTime dateOfBirth, string planText, DateTime startDate, string creditText)
+                          string phone, DateTime dateOfBirth, string planText, DateTime startDate,
+                          string creditText, byte[] profilePic)
         {
             decimal credit = 0;
             decimal.TryParse(creditText, out credit);
 
             string sql = @"INSERT INTO Members 
-        (FirstName, LastName, Email, [Password], Phone, DateOfBirth, StartDate, Plan, Credit, Active)
-        VALUES (@FirstName, @LastName, @Email, @Password, @Phone, @DateOfBirth, @StartDate, @Plan, @Credit, True)";
+        (FirstName, LastName, Email, [Password], Phone, DateOfBirth, StartDate, Plan, Credit, Active, ProfilePic)
+        VALUES (@FirstName, @LastName, @Email, @Password, @Phone, @DateOfBirth, @StartDate, @Plan, @Credit, True, @ProfilePic)";
 
             try
             {
@@ -216,6 +221,11 @@ namespace GymManagement
                     cmd.Parameters.AddWithValue("@StartDate", startDate);
                     cmd.Parameters.AddWithValue("@Plan", planText);
                     cmd.Parameters.AddWithValue("@Credit", credit);
+
+                    if (profilePic != null)
+                        cmd.Parameters.Add("@ProfilePic", OleDbType.LongVarBinary).Value = profilePic;
+                    else
+                        cmd.Parameters.Add("@ProfilePic", OleDbType.LongVarBinary).Value = DBNull.Value;
 
                     cmd.ExecuteNonQuery();
                 }
@@ -240,6 +250,25 @@ namespace GymManagement
             loginForm loginForm = new loginForm();
             loginForm.Show();
             this.Hide();
+        }
+
+        private void btn_Upload_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog dlg = new OpenFileDialog())
+            {
+                dlg.Filter = "Image Files (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png|All files (*.*)|*.*";
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    // Display the image
+                    pb_ProfilePic.Image = Image.FromFile(dlg.FileName);
+                    // Convert to JPEG bytes and store
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        pb_ProfilePic.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                        selectedImageBytes = ms.ToArray();
+                    }
+                }
+            }
         }
 
     }

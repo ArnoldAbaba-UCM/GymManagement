@@ -44,6 +44,9 @@
             this.lbl_Message2 = new System.Windows.Forms.Label();
             this.lbl_Delete = new System.Windows.Forms.Label();
             this.lbl_Message3 = new System.Windows.Forms.Label();
+            this.pb_ProfilePic = new System.Windows.Forms.PictureBox();
+            this.btn_Upload = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_ProfilePic)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_FirstName
@@ -144,7 +147,7 @@
             // 
             // btn_Save
             // 
-            this.btn_Save.Location = new System.Drawing.Point(222, 250);
+            this.btn_Save.Location = new System.Drawing.Point(222, 323);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(100, 44);
             this.btn_Save.TabIndex = 12;
@@ -154,7 +157,7 @@
             // 
             // btn_Cancel
             // 
-            this.btn_Cancel.Location = new System.Drawing.Point(126, 250);
+            this.btn_Cancel.Location = new System.Drawing.Point(126, 323);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(90, 44);
             this.btn_Cancel.TabIndex = 13;
@@ -166,7 +169,7 @@
             // 
             this.lbl_Message2.AutoSize = true;
             this.lbl_Message2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Message2.Location = new System.Drawing.Point(127, 327);
+            this.lbl_Message2.Location = new System.Drawing.Point(96, 403);
             this.lbl_Message2.Name = "lbl_Message2";
             this.lbl_Message2.Size = new System.Drawing.Size(89, 13);
             this.lbl_Message2.TabIndex = 14;
@@ -176,7 +179,7 @@
             // 
             this.lbl_Delete.AutoSize = true;
             this.lbl_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Delete.Location = new System.Drawing.Point(219, 327);
+            this.lbl_Delete.Location = new System.Drawing.Point(188, 403);
             this.lbl_Delete.Name = "lbl_Delete";
             this.lbl_Delete.Size = new System.Drawing.Size(44, 13);
             this.lbl_Delete.TabIndex = 15;
@@ -187,18 +190,39 @@
             // 
             this.lbl_Message3.AutoSize = true;
             this.lbl_Message3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Message3.Location = new System.Drawing.Point(269, 327);
+            this.lbl_Message3.Location = new System.Drawing.Point(238, 403);
             this.lbl_Message3.Name = "lbl_Message3";
             this.lbl_Message3.Size = new System.Drawing.Size(71, 13);
             this.lbl_Message3.TabIndex = 16;
             this.lbl_Message3.Text = "this account?";
+            // 
+            // pb_ProfilePic
+            // 
+            this.pb_ProfilePic.Location = new System.Drawing.Point(126, 226);
+            this.pb_ProfilePic.Name = "pb_ProfilePic";
+            this.pb_ProfilePic.Size = new System.Drawing.Size(69, 59);
+            this.pb_ProfilePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_ProfilePic.TabIndex = 17;
+            this.pb_ProfilePic.TabStop = false;
+            // 
+            // btn_Upload
+            // 
+            this.btn_Upload.Location = new System.Drawing.Point(201, 259);
+            this.btn_Upload.Name = "btn_Upload";
+            this.btn_Upload.Size = new System.Drawing.Size(121, 26);
+            this.btn_Upload.TabIndex = 18;
+            this.btn_Upload.Text = "Upload";
+            this.btn_Upload.UseVisualStyleBackColor = true;
+            this.btn_Upload.Click += new System.EventHandler(this.btn_Upload_Click);
             // 
             // editProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(396, 361);
+            this.ClientSize = new System.Drawing.Size(396, 441);
+            this.Controls.Add(this.btn_Upload);
+            this.Controls.Add(this.pb_ProfilePic);
             this.Controls.Add(this.lbl_Message3);
             this.Controls.Add(this.lbl_Delete);
             this.Controls.Add(this.lbl_Message2);
@@ -218,6 +242,7 @@
             this.Name = "editProfileForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "editProfileForm";
+            ((System.ComponentModel.ISupportInitialize)(this.pb_ProfilePic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,5 +266,7 @@
         private System.Windows.Forms.Label lbl_Message2;
         private System.Windows.Forms.Label lbl_Delete;
         private System.Windows.Forms.Label lbl_Message3;
+        private System.Windows.Forms.PictureBox pb_ProfilePic;
+        private System.Windows.Forms.Button btn_Upload;
     }
 }

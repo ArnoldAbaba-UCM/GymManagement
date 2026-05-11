@@ -42,9 +42,13 @@
             this.lbl_RecentPayments = new System.Windows.Forms.Label();
             this.dgv_RecentTransaction = new System.Windows.Forms.DataGridView();
             this.btn_TopUp = new System.Windows.Forms.Button();
+            this.pb_ProfilePic = new System.Windows.Forms.PictureBox();
+            this.txt_SearchBar = new System.Windows.Forms.TextBox();
+            this.btn_Search = new System.Windows.Forms.Button();
             this.pl_Welcome.SuspendLayout();
             this.pl_Status.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_RecentTransaction)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_ProfilePic)).BeginInit();
             this.SuspendLayout();
             // 
             // pl_Welcome
@@ -86,6 +90,7 @@
             // 
             this.pl_Status.BackColor = System.Drawing.Color.DarkSalmon;
             this.pl_Status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pl_Status.Controls.Add(this.pb_ProfilePic);
             this.pl_Status.Controls.Add(this.lbl_Status);
             this.pl_Status.Controls.Add(this.lbl_Credit);
             this.pl_Status.Controls.Add(this.lbl_JoinedDate);
@@ -194,6 +199,32 @@
             this.btn_TopUp.UseVisualStyleBackColor = false;
             this.btn_TopUp.Click += new System.EventHandler(this.btn_TopUp_Click);
             // 
+            // pb_ProfilePic
+            // 
+            this.pb_ProfilePic.Location = new System.Drawing.Point(287, 21);
+            this.pb_ProfilePic.Name = "pb_ProfilePic";
+            this.pb_ProfilePic.Size = new System.Drawing.Size(84, 77);
+            this.pb_ProfilePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_ProfilePic.TabIndex = 4;
+            this.pb_ProfilePic.TabStop = false;
+            // 
+            // txt_SearchBar
+            // 
+            this.txt_SearchBar.Location = new System.Drawing.Point(472, 213);
+            this.txt_SearchBar.Name = "txt_SearchBar";
+            this.txt_SearchBar.Size = new System.Drawing.Size(154, 20);
+            this.txt_SearchBar.TabIndex = 7;
+            // 
+            // btn_Search
+            // 
+            this.btn_Search.Location = new System.Drawing.Point(632, 213);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(75, 23);
+            this.btn_Search.TabIndex = 8;
+            this.btn_Search.Text = "Search";
+            this.btn_Search.UseVisualStyleBackColor = true;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
+            // 
             // dashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -202,6 +233,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(777, 426);
+            this.Controls.Add(this.btn_Search);
+            this.Controls.Add(this.txt_SearchBar);
             this.Controls.Add(this.btn_TopUp);
             this.Controls.Add(this.dgv_RecentTransaction);
             this.Controls.Add(this.lbl_RecentPayments);
@@ -217,6 +250,7 @@
             this.pl_Status.ResumeLayout(false);
             this.pl_Status.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_RecentTransaction)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_ProfilePic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,5 +271,8 @@
         private System.Windows.Forms.Label lbl_RecentPayments;
         private System.Windows.Forms.DataGridView dgv_RecentTransaction;
         private System.Windows.Forms.Button btn_TopUp;
+        private System.Windows.Forms.PictureBox pb_ProfilePic;
+        private System.Windows.Forms.TextBox txt_SearchBar;
+        private System.Windows.Forms.Button btn_Search;
     }
 }

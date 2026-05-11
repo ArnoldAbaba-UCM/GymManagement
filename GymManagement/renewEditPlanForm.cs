@@ -96,7 +96,7 @@ namespace GymManagement
 
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
-            //Validation plan
+            // Validation plan
             string newPlanText = cmb_Plan.Text;
             if (string.IsNullOrEmpty(newPlanText) || !newPlanText.Contains("₱"))
             {
@@ -107,7 +107,7 @@ namespace GymManagement
             string[] parts = newPlanText.Split('₱');
             newPlanPrice = decimal.Parse(parts[1].Trim());
 
-            //Re‑read the current credit from the database para safe
+            // Re‑read the current credit from the database para safe
             string creditSql = "SELECT Credit FROM Members WHERE Email = @Email AND Active = True";
             try
             {
@@ -138,22 +138,22 @@ namespace GymManagement
             if (currentCredit < newPlanPrice)
             {
                 MessageBox.Show(string.Format("Insufficient credit. You need {0:C} but have {1:C}.", newPlanPrice, currentCredit),
-                "Cannot Renew", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    "Cannot Renew", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            //Update the member's plan, reset start date to today, and deduct credit
+            // Update the member's plan, reset start date to today, and deduct credit
             string updateSql = @"UPDATE Members 
-                                 SET Plan = @Plan, StartDate = @StartDate, Credit = Credit - @Price
-                                 WHERE Email = @Email AND Active = True";
+                         SET Plan = @Plan, StartDate = @StartDate, Credit = Credit - @Price
+                         WHERE Email = @Email AND Active = True";
 
             try
             {
                 using (var cmd = new OleDbCommand(updateSql, con))
                 {
-                    // Use today's date as the new start date
-                    cmd.Parameters.Add("@StartDate", OleDbType.Date).Value = DateTime.Today;
+                    // Correct order: @Plan, @StartDate, @Price, @Email (matching the SQL)
                     cmd.Parameters.Add("@Plan", OleDbType.VarWChar).Value = newPlanText;
+                    cmd.Parameters.Add("@StartDate", OleDbType.Date).Value = DateTime.Today;
                     cmd.Parameters.Add("@Price", OleDbType.Currency).Value = newPlanPrice;
                     cmd.Parameters.Add("@Email", OleDbType.VarWChar).Value = LoggedInEmail;
 
@@ -164,19 +164,15 @@ namespace GymManagement
 
                     if (rows > 0)
                     {
-                        //Insert transaction record (deduction)
-                        string memberName = this.Text; // We’ll pass it from the dashboard (or store it)
-                        // Since we need the member’s full name for the transaction, we can set it when opening the form.
-                        // We’ll add a public property for that.
+                        // Insert transaction record (deduction)
                         if (string.IsNullOrEmpty(MemberFullName))
                         {
-                            // fallback: fetch now
                             MemberFullName = GetMemberFullName();
                         }
 
                         string txnSql = @"INSERT INTO Transactions 
-                            (MemberName, Amount, Description, PaymentDate, PaymentMethod)
-                            VALUES (@mname, @amt, @desc, @payDate, @method)";
+                    (MemberName, Amount, Description, PaymentDate, PaymentMethod)
+                    VALUES (@mname, @amt, @desc, @payDate, @method)";
                         using (var cmdTxn = new OleDbCommand(txnSql, con))
                         {
                             cmdTxn.Parameters.Add("@mname", OleDbType.VarWChar).Value = MemberFullName;
